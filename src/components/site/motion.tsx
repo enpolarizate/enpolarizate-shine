@@ -1,11 +1,11 @@
 import { motion, useInView, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef, type ReactNode } from "react";
 
-export const fadeUp = {
+export const fadeUp: any = {
   hidden: { opacity: 0, y: 28 },
-  show: (i = 0) => ({
+  show: (i: number = 0) => ({
     opacity: 1, y: 0,
-    transition: { duration: 0.8, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.8, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] as any },
   }),
 };
 
