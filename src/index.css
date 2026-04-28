@@ -1,105 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* ENPOLARÍZATE Design System
+   Premium automotive: black + gold + silver
+   All colors HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand palette */
+    --background: 0 0% 4%;            /* near-black */
+    --foreground: 0 0% 96%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --surface: 0 0% 7%;
+    --surface-2: 0 0% 11%;            /* dark gray block */
+    --surface-3: 0 0% 16%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --silver: 60 1% 60%;              /* #9a9997 */
+    --silver-foreground: 0 0% 8%;
+    --silver-block: 0 0% 88%;         /* light metallic block bg */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --gold: 39 70% 44%;               /* #bb8924 */
+    --gold-light: 47 86% 71%;         /* #f4da76 */
+    --gold-deep: 36 80% 28%;
+    --gold-foreground: 0 0% 6%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --dark-gray: 0 0% 29%;            /* #494949 */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 96%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 96%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --primary: 39 70% 44%;
+    --primary-foreground: 0 0% 6%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --secondary: 0 0% 13%;
+    --secondary-foreground: 0 0% 96%;
 
-    --radius: 0.5rem;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 65%;
 
-    --sidebar-background: 0 0% 98%;
+    --accent: 47 86% 71%;
+    --accent-foreground: 0 0% 6%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --border: 0 0% 18%;
+    --input: 0 0% 14%;
+    --ring: 39 70% 44%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --radius: 0.75rem;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(36 80% 32%), hsl(39 70% 50%) 45%, hsl(47 86% 71%) 100%);
+    --gradient-gold-soft: linear-gradient(135deg, hsl(39 70% 44% / 0.15), hsl(47 86% 71% / 0.05));
+    --gradient-silver: linear-gradient(135deg, hsl(0 0% 92%), hsl(0 0% 78%) 50%, hsl(0 0% 88%));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 4%), hsl(0 0% 8%));
+    --gradient-radial-gold: radial-gradient(circle at 50% 50%, hsl(39 70% 44% / 0.18), transparent 60%);
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    /* Shadows */
+    --shadow-gold: 0 10px 40px -10px hsl(39 70% 44% / 0.45);
+    --shadow-gold-lg: 0 20px 60px -15px hsl(39 70% 44% / 0.55);
+    --shadow-elegant: 0 20px 50px -20px hsl(0 0% 0% / 0.7);
+    --shadow-card: 0 8px 30px -10px hsl(0 0% 0% / 0.6);
 
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Easing */
+    --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+  .dark { /* same as root, app is dark by default */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 96%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+  * { @apply border-border; }
+
+  html { scroll-behavior: smooth; }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  h1, h2, h3, h4, h5 { font-family: 'Montserrat', sans-serif; letter-spacing: -0.01em; }
+}
+
+@layer components {
+  .text-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-silver {
+    background: var(--gradient-silver);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .divider-gold {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--gold)/0.6), transparent);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 0 1px hsl(var(--gold)/0.25), var(--shadow-gold);
+  }
+
+  .premium-card {
+    @apply rounded-2xl border border-border/60 bg-card/70 backdrop-blur-sm;
+    box-shadow: var(--shadow-card);
+    transition: transform .5s var(--ease-premium), box-shadow .5s var(--ease-premium), border-color .5s var(--ease-premium);
+  }
+  .premium-card:hover {
+    transform: translateY(-4px);
+    border-color: hsl(var(--gold) / 0.55);
+    box-shadow: var(--shadow-gold);
+  }
+
+  .silver-card {
+    background: var(--gradient-silver);
+    color: hsl(var(--silver-foreground));
+    @apply rounded-2xl;
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .section-padding { @apply py-24 md:py-32 px-6; }
+
+  .container-pro { @apply max-w-7xl mx-auto; }
+
+  .btn-gold {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.75rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: hsl(var(--gold-foreground));
+    background: var(--gradient-gold);
+    box-shadow: var(--shadow-gold);
+    transition: transform .4s var(--ease-premium), box-shadow .4s var(--ease-premium), filter .4s var(--ease-premium);
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .btn-gold::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(120deg, transparent 30%, hsl(0 0% 100% / 0.45) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform .9s var(--ease-premium);
+    z-index: -1;
+  }
+  .btn-gold:hover { transform: translateY(-2px) scale(1.02); box-shadow: var(--shadow-gold-lg); filter: brightness(1.07); }
+  .btn-gold:hover::before { transform: translateX(120%); }
+
+  .btn-outline-gold {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+    padding: 0.9rem 1.7rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    color: hsl(var(--foreground));
+    border: 1px solid hsl(var(--gold) / 0.5);
+    background: hsl(var(--gold) / 0.04);
+    transition: all .4s var(--ease-premium);
+  }
+  .btn-outline-gold:hover {
+    border-color: hsl(var(--gold));
+    background: hsl(var(--gold) / 0.12);
+    box-shadow: var(--shadow-gold);
+  }
+
+  .ambient-glow {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(80px);
+    pointer-events: none;
+    opacity: 0.55;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] font-semibold;
+    color: hsl(var(--gold-light));
+  }
+  .eyebrow::before { content: ""; width: 28px; height: 1px; background: hsl(var(--gold)); }
+
+  .shimmer {
+    background: linear-gradient(90deg, hsl(var(--gold) / 0.2), hsl(var(--gold-light) / 0.55), hsl(var(--gold) / 0.2));
+    background-size: 200% 100%;
+    animation: shimmer 3s linear infinite;
   }
 }
+
+@layer utilities {
+  .bg-radial-gold { background-image: var(--gradient-radial-gold); }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 hsl(var(--gold) / 0.6), var(--shadow-gold); }
+  50% { box-shadow: 0 0 0 14px hsl(var(--gold) / 0), var(--shadow-gold-lg); }
+}
+.animate-pulse-glow { animation: pulse-glow 2.6s var(--ease-premium) infinite; }
