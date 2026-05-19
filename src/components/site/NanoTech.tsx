@@ -27,7 +27,7 @@ export default function NanoTech() {
         <Reveal className="text-center max-w-3xl mx-auto">
           <span className="eyebrow">Tecnología de alto nivel</span>
           <h2 className="mt-4 font-display text-3xl md:text-5xl font-extrabold tracking-tight">
-            TECNOLOGÍA <span className="text-gold">NANO BLINDEX</span>
+            TECNOLOGÍA <span className="text-gold">NANO BLINDEX</span> <span className="text-white">AMERICANO</span>
           </h2>
           <div className="mt-6 space-y-1 text-muted-foreground text-lg">
             <p>Más que un polarizado…</p>
