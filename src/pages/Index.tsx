@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import Navbar from "@/components/site/Navbar";
 import Hero from "@/components/site/Hero";
-import Highlights from "@/components/site/Highlights";
 import TintOptions from "@/components/site/TintOptions";
 import NanoTech from "@/components/site/NanoTech";
 import Benefits from "@/components/site/Benefits";
 import Testimonials from "@/components/site/Testimonials";
 import Coverage from "@/components/site/Coverage";
+import WhatYouGet from "@/components/site/WhatYouGet";
 import Warranty from "@/components/site/Warranty";
 import Wholesale from "@/components/site/Wholesale";
 import Stats from "@/components/site/Stats";
