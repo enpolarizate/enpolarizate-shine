@@ -48,6 +48,7 @@ const Index = () => {
       <Warranty />
       <Wholesale />
       <Coverage />
+      <WhatYouGet />
       <Stats />
       <FAQ />
       <ContactForm />
