@@ -51,11 +51,6 @@ export default function NanoTech() {
           </div>
         </Reveal>
 
-        <Reveal className="mt-16 text-center">
-          <h3 className="font-display text-2xl md:text-3xl font-bold">
-            ¿POR QUÉ <span className="text-gold">NANO BLINDEX</span> ES DIFERENTE?
-          </h3>
-        </Reveal>
 
         <Stagger className="mt-10 grid md:grid-cols-2 gap-x-10 gap-y-4">
           {checks.map((c, i) => (
