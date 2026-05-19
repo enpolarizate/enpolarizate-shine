@@ -19,8 +19,12 @@ export default function Warranty() {
                   <ShieldCheck className="h-8 w-8" />
                 </div>
                 <h2 className="mt-6 font-display text-3xl md:text-5xl font-extrabold tracking-tight">
-                  🔒 GARANTÍA <span className="text-gold">BLINDADA POR 8 AÑOS</span>
+                  🔒 GARANTÍA <span className="text-gold">BLINDADA</span>
                 </h2>
+                <div className="mt-5 inline-flex items-center gap-3 px-5 py-3 rounded-full bg-gradient-to-r from-gold/20 to-gold/5 border border-gold/40 backdrop-blur">
+                  <span className="font-display text-2xl md:text-3xl font-extrabold text-gold">8</span>
+                  <span className="text-sm md:text-base font-semibold text-gold-light uppercase tracking-wider">Años de<br className="md:hidden" /> garantía</span>
+                </div>
               </div>
 
               <div className="divider-gold mt-12" />
