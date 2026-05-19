@@ -4,7 +4,7 @@ import { WHATSAPP_URL } from "./FloatingWhatsApp";
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center pt-28 md:pt-32 pb-16 overflow-hidden">
+    <section id="inicio" className="relative min-h-[85vh] flex items-center pt-20 md:pt-24 pb-12 overflow-hidden">
       {/* Ambient backgrounds */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,hsl(0_0%_10%),hsl(0_0%_4%))]" />
       <motion.div
