@@ -31,7 +31,7 @@ export default function Benefits() {
 
         <Stagger className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((b, i) => (
-            <StaggerItem key={i} className={i === 4 ? "lg:col-start-2" : ""}>
+            <StaggerItem key={i}>
               <article className="group premium-card overflow-hidden h-full flex flex-col">
                 <div className="relative aspect-[16/11] overflow-hidden">
                   <img src={b.img} alt={b.title} loading="lazy" width={800} height={550} className="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-110" />
