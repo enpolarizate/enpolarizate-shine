@@ -20,8 +20,8 @@ export default function TintOptions() {
       <div className="container-pro relative">
         <Reveal className="text-center max-w-3xl mx-auto">
           <span className="eyebrow">Personaliza tu nivel</span>
-          <h2 className="mt-4 font-display text-3xl md:text-5xl font-extrabold tracking-tight">
-            OPCIONES DISPONIBLES <span className="text-gold">DEL PRODUCTO</span>
+          <h2 className="mt-4 font-display text-3xl md:text-5xl font-extrabold tracking-tight text-center">
+            TONALIDADES Y <span className="text-gold">NIVELES DE PRIVACIDAD</span>
           </h2>
           <p className="mt-5 text-muted-foreground text-lg leading-relaxed">
             Elige el nivel de oscuridad que mejor se adapte a tu estilo, tu necesidad y tu nivel de privacidad.
