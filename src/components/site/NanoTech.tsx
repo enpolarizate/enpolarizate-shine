@@ -43,8 +43,8 @@ export default function NanoTech() {
             <div className="absolute inset-0 flex items-center">
               <div className="px-8 md:px-14 max-w-xl">
                 <p className="eyebrow">Premium</p>
-                <h3 className="mt-3 font-display text-2xl md:text-4xl font-bold">
-                  Una <span className="text-gold">capa inteligente</span> sobre tu vidrio.
+                <h3 className="mt-3 font-display md:text-4xl font-bold text-left text-4xl my-px">
+                  ¿POR QUÉ <span className="text-gold">NANO BLINDEX AMERICANO</span> ES DIFERENTE?
                 </h3>
               </div>
             </div>
