@@ -39,7 +39,7 @@ const Index = () => {
     <main className="bg-background text-foreground overflow-x-hidden">
       <Navbar />
       <Hero />
-      <Highlights />
+      
       <TintOptions />
       <NanoTech />
       <Benefits />
