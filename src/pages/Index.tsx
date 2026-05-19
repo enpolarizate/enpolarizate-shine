@@ -8,6 +8,7 @@ import Benefits from "@/components/site/Benefits";
 import Testimonials from "@/components/site/Testimonials";
 import Coverage from "@/components/site/Coverage";
 import Warranty from "@/components/site/Warranty";
+import Wholesale from "@/components/site/Wholesale";
 import Stats from "@/components/site/Stats";
 import FAQ from "@/components/site/FAQ";
 import ContactForm from "@/components/site/ContactForm";
@@ -45,6 +46,7 @@ const Index = () => {
       <Benefits />
       <Testimonials />
       <Warranty />
+      <Wholesale />
       <Coverage />
       <Stats />
       <FAQ />
