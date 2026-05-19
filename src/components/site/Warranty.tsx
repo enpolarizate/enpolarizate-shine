@@ -1,5 +1,6 @@
 import { ShieldCheck, ArrowRight, Check } from "lucide-react";
 import { Reveal, Stagger, StaggerItem } from "./motion";
+import warrantyBadge from "@/assets/warranty-badge.png";
 import { WHATSAPP_URL } from "./FloatingWhatsApp";
 
 const covers = ["Craquelado (quiebre de la película)", "Aparición de burbujas", "Decoloración"];
