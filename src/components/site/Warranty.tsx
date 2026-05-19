@@ -3,12 +3,6 @@ import { Reveal, Stagger, StaggerItem } from "./motion";
 import { WHATSAPP_URL } from "./FloatingWhatsApp";
 
 const covers = ["Craquelado (quiebre de la película)", "Aparición de burbujas", "Decoloración"];
-const includes = [
-  "Asesoría personalizada gratuita",
-  "Instalación profesional de Nano Blindex",
-  "Domicilio Gratis en Bogotá o en taller de instalación",
-  "Garantía de 8 años",
-];
 
 export default function Warranty() {
   return (
@@ -31,36 +25,18 @@ export default function Warranty() {
 
               <div className="divider-gold mt-12" />
 
-              <div className="grid md:grid-cols-2 gap-10 md:gap-14 mt-12">
-                <div>
-                  <h3 className="font-display text-xl md:text-2xl font-bold">¿QUÉ CUBRE ESTA GARANTÍA?</h3>
-                  <Stagger className="mt-5 space-y-3">
-                    {covers.map((c) => (
-                      <StaggerItem key={c}>
-                        <div className="flex items-start gap-3 p-4 rounded-xl bg-background/60 border border-border/60 hover:border-gold/50 transition-colors duration-500">
-                          <Check className="h-5 w-5 text-gold-light mt-0.5 flex-shrink-0" strokeWidth={3} />
-                          <span className="text-foreground/90">{c}</span>
-                        </div>
-                      </StaggerItem>
-                    ))}
-                  </Stagger>
-                </div>
-
-                <div>
-                  <h3 className="font-display text-xl md:text-2xl font-bold">
-                    ¿Qué obtendrás con nuestro servicio de polarizado?
-                  </h3>
-                  <Stagger className="mt-5 space-y-3">
-                    {includes.map((c) => (
-                      <StaggerItem key={c}>
-                        <div className="flex items-start gap-3 p-4 rounded-xl bg-gradient-to-r from-gold/10 to-transparent border border-gold/25">
-                          <Check className="h-5 w-5 text-gold-light mt-0.5 flex-shrink-0" strokeWidth={3} />
-                          <span className="text-foreground/90">{c}</span>
-                        </div>
-                      </StaggerItem>
-                    ))}
-                  </Stagger>
-                </div>
+              <div className="mt-12 max-w-xl mx-auto">
+                <h3 className="font-display text-xl md:text-2xl font-bold text-center">¿QUÉ CUBRE ESTA GARANTÍA?</h3>
+                <Stagger className="mt-5 space-y-3">
+                  {covers.map((c) => (
+                    <StaggerItem key={c}>
+                      <div className="flex items-start gap-3 p-4 rounded-xl bg-background/60 border border-border/60 hover:border-gold/50 transition-colors duration-500">
+                        <Check className="h-5 w-5 text-gold-light mt-0.5 flex-shrink-0" strokeWidth={3} />
+                        <span className="text-foreground/90">{c}</span>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </Stagger>
               </div>
 
               <div className="mt-12 text-center">
