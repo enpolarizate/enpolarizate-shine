@@ -28,29 +28,73 @@ export default function Warranty() {
               <div className="grid md:grid-cols-2 gap-10 md:gap-12 mt-12 items-center">
                 {/* Warranty badge / insignia */}
                 <div className="flex justify-center">
-                  <div className="relative">
-                    {/* Glow */}
-                    <div aria-hidden className="absolute -inset-6 rounded-full bg-gold/25 blur-3xl" />
-                    {/* Outer ring */}
-                    <div className="relative h-64 w-64 md:h-72 md:w-72 rounded-full bg-gradient-to-br from-gold-light via-gold to-[hsl(var(--gold-deep))] p-1.5 shadow-[var(--shadow-gold-lg)] animate-[spin_40s_linear_infinite]">
-                      <div className="h-full w-full rounded-full bg-gradient-to-br from-black via-surface-2 to-black p-2">
-                        {/* Inner dashed ring */}
-                        <div className="h-full w-full rounded-full border-2 border-dashed border-gold/50 flex items-center justify-center">
-                          <div className="h-[82%] w-[82%] rounded-full bg-gradient-to-br from-gold via-gold-light to-[hsl(var(--gold-deep))] flex items-center justify-center shadow-inner">
-                            <div className="h-[88%] w-[88%] rounded-full bg-gradient-to-br from-black to-surface-2 flex flex-col items-center justify-center text-center px-4">
-                              <ShieldCheck className="h-7 w-7 text-gold-light mb-1" strokeWidth={2.5} />
-                              <span className="font-display text-5xl md:text-6xl font-extrabold text-gold leading-none">8</span>
-                              <span className="mt-1 text-[10px] md:text-xs font-bold text-gold-light uppercase tracking-[0.2em]">Años</span>
-                              <span className="text-[10px] md:text-xs font-semibold text-foreground/80 uppercase tracking-widest">Garantía</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Ribbon */}
-                    <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 px-5 py-1.5 rounded-md bg-gradient-to-r from-gold to-gold-light text-[hsl(var(--gold-foreground))] text-xs font-extrabold uppercase tracking-widest shadow-[var(--shadow-gold)] whitespace-nowrap">
-                      Certificado
-                    </div>
+                  <div className="relative w-64 md:w-80">
+                    <div aria-hidden className="absolute -inset-6 rounded-full bg-gold/30 blur-3xl" />
+                    <svg
+                      viewBox="0 0 300 300"
+                      className="relative w-full h-auto drop-shadow-[0_20px_40px_hsl(39_70%_44%/0.45)]"
+                      role="img"
+                      aria-label="Insignia de 8 años de garantía"
+                    >
+                      <defs>
+                        <radialGradient id="goldRing" cx="50%" cy="40%" r="65%">
+                          <stop offset="0%" stopColor="hsl(47, 95%, 78%)" />
+                          <stop offset="55%" stopColor="hsl(43, 88%, 56%)" />
+                          <stop offset="100%" stopColor="hsl(36, 75%, 35%)" />
+                        </radialGradient>
+                        <radialGradient id="goldRingInner" cx="50%" cy="40%" r="65%">
+                          <stop offset="0%" stopColor="hsl(47, 95%, 80%)" />
+                          <stop offset="100%" stopColor="hsl(38, 80%, 42%)" />
+                        </radialGradient>
+                        <radialGradient id="centerDark" cx="50%" cy="40%" r="70%">
+                          <stop offset="0%" stopColor="hsl(0, 0%, 18%)" />
+                          <stop offset="100%" stopColor="hsl(0, 0%, 4%)" />
+                        </radialGradient>
+                        <linearGradient id="numberGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                          <stop offset="0%" stopColor="hsl(47, 95%, 80%)" />
+                          <stop offset="100%" stopColor="hsl(38, 85%, 50%)" />
+                        </linearGradient>
+                        <path id="topArc" d="M 40,150 A 110,110 0 0 1 260,150" fill="none" />
+                        <path id="bottomArc" d="M 50,150 A 100,100 0 0 0 250,150" fill="none" />
+                      </defs>
+
+                      <circle cx="150" cy="150" r="145" fill="url(#goldRing)" />
+                      <circle cx="150" cy="150" r="125" fill="hsl(0, 0%, 6%)" />
+                      <circle cx="150" cy="150" r="118" fill="url(#goldRingInner)" />
+                      <circle cx="150" cy="150" r="92" fill="url(#centerDark)" />
+                      <circle cx="150" cy="150" r="92" fill="none" stroke="hsl(43, 88%, 56%)" strokeWidth="2" />
+
+                      <text fill="hsl(0, 0%, 6%)" fontSize="17" fontWeight="900" letterSpacing="3" fontFamily="Montserrat, Arial, sans-serif">
+                        <textPath href="#topArc" startOffset="50%" textAnchor="middle">
+                          GARANTÍA DE 8 AÑOS
+                        </textPath>
+                      </text>
+
+                      <text fill="hsl(0, 0%, 6%)" fontSize="13" fontWeight="800" letterSpacing="6" fontFamily="Montserrat, Arial, sans-serif">
+                        <textPath href="#bottomArc" startOffset="50%" textAnchor="middle">
+                          CERTIFICADA
+                        </textPath>
+                      </text>
+
+                      <g fill="hsl(47, 95%, 78%)">
+                        <polygon points="150,68 152.5,75 160,75 154,80 156.5,87 150,82.5 143.5,87 146,80 140,75 147.5,75" />
+                        <polygon points="122,76 124,81.5 130,81.5 125,85.5 127,91 122,87.5 117,91 119,85.5 114,81.5 120,81.5" />
+                        <polygon points="178,76 180,81.5 186,81.5 181,85.5 183,91 178,87.5 173,91 175,85.5 170,81.5 176,81.5" />
+                      </g>
+
+                      <text x="150" y="178" textAnchor="middle" fill="url(#numberGrad)" fontSize="82" fontWeight="900" fontFamily="Montserrat, Arial Black, sans-serif" stroke="hsl(38, 80%, 35%)" strokeWidth="1">
+                        8
+                      </text>
+
+                      <text x="150" y="208" textAnchor="middle" fill="hsl(47, 90%, 75%)" fontSize="18" fontWeight="800" letterSpacing="6" fontFamily="Montserrat, Arial, sans-serif">
+                        AÑOS
+                      </text>
+
+                      <line x1="78" y1="202" x2="103" y2="202" stroke="hsl(43, 88%, 56%)" strokeWidth="2" />
+                      <line x1="197" y1="202" x2="222" y2="202" stroke="hsl(43, 88%, 56%)" strokeWidth="2" />
+
+                      <ellipse cx="120" cy="100" rx="55" ry="20" fill="hsl(47, 100%, 90%)" opacity="0.18" />
+                    </svg>
                   </div>
                 </div>
 
