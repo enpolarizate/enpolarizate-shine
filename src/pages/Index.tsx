@@ -44,8 +44,8 @@ const Index = () => {
       <NanoTech />
       <Benefits />
       <Testimonials />
-      <Coverage />
       <Warranty />
+      <Coverage />
       <Stats />
       <FAQ />
       <ContactForm />
