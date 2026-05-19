@@ -1,9 +1,10 @@
-import { ArrowRight, Eye, ShieldCheck, Sun, Snowflake, Sparkles } from "lucide-react";
+import { ArrowRight, Eye, ShieldCheck, Sun, Snowflake, Sparkles, Wrench } from "lucide-react";
 import privacy from "@/assets/benefit-privacy.jpg";
 import security from "@/assets/benefit-security.jpg";
 import uv from "@/assets/benefit-uv.jpg";
 import heat from "@/assets/benefit-heat.jpg";
 import aesthetic from "@/assets/benefit-aesthetic.jpg";
+import warranty from "@/assets/benefit-warranty.jpg";
 import { Reveal, Stagger, StaggerItem } from "./motion";
 import { WHATSAPP_URL } from "./FloatingWhatsApp";
 
@@ -13,6 +14,7 @@ const benefits = [
   { icon: Sun, title: "Protección contra rayos UV", img: uv },
   { icon: Snowflake, title: "Rechazo de calor (más confort)", img: heat },
   { icon: Sparkles, title: "Mejora estética del vehículo", img: aesthetic },
+  { icon: Wrench, title: "Instalación profesional certificada", img: warranty },
 ];
 
 export default function Benefits() {
