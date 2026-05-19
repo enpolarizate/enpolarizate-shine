@@ -39,7 +39,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           >
-            Descubre en este video por qué <span className="text-amber-500">tu carro sin polarizar</span> es una puerta a riesgos... y cómo el <span>Nano Blindex Americano</span> puede darte privacidad, protección UV y una seguridad real en cada kilómetro
+            Descubre en este video por qué <span className="text-amber-500">tu carro sin polarizar</span> es una puerta a riesgos... y cómo el <span className="text-amber-500">Nano Blindex Americano</span> puede darte privacidad, protección UV y una seguridad real en cada kilómetro
           </motion.h1>
 
           <motion.p
