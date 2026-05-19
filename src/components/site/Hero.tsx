@@ -34,7 +34,7 @@ export default function Hero() {
           </motion.span>
 
           <motion.h1
-            className="mt-5 font-display sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight border-slate-50 text-slate-50 text-3xl"
+            className="mt-5 font-display font-bold leading-[1.08] tracking-tight border-slate-50 text-slate-50 text-3xl"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
