@@ -1,9 +1,10 @@
-import { ArrowRight, Eye, ShieldCheck, Sun, Snowflake, Sparkles } from "lucide-react";
+import { ArrowRight, Eye, ShieldCheck, Sun, Snowflake, Sparkles, Wrench } from "lucide-react";
 import privacy from "@/assets/benefit-privacy.jpg";
 import security from "@/assets/benefit-security.jpg";
 import uv from "@/assets/benefit-uv.jpg";
 import heat from "@/assets/benefit-heat.jpg";
 import aesthetic from "@/assets/benefit-aesthetic.jpg";
+import warranty from "@/assets/benefit-warranty.jpg";
 import { Reveal, Stagger, StaggerItem } from "./motion";
 import { WHATSAPP_URL } from "./FloatingWhatsApp";
 
@@ -13,6 +14,7 @@ const benefits = [
   { icon: Sun, title: "Protección contra rayos UV", img: uv },
   { icon: Snowflake, title: "Rechazo de calor (más confort)", img: heat },
   { icon: Sparkles, title: "Mejora estética del vehículo", img: aesthetic },
+  { icon: Wrench, title: "Instalación profesional certificada", img: warranty },
 ];
 
 export default function Benefits() {
@@ -29,7 +31,7 @@ export default function Benefits() {
 
         <Stagger className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((b, i) => (
-            <StaggerItem key={i} className={i === 4 ? "lg:col-start-2" : ""}>
+            <StaggerItem key={i}>
               <article className="group premium-card overflow-hidden h-full flex flex-col">
                 <div className="relative aspect-[16/11] overflow-hidden">
                   <img src={b.img} alt={b.title} loading="lazy" width={800} height={550} className="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-110" />
