@@ -3,12 +3,6 @@ import { Reveal, Stagger, StaggerItem } from "./motion";
 import { WHATSAPP_URL } from "./FloatingWhatsApp";
 
 const covers = ["Craquelado (quiebre de la película)", "Aparición de burbujas", "Decoloración"];
-const includes = [
-  "Asesoría personalizada gratuita",
-  "Instalación profesional de Nano Blindex",
-  "Domicilio Gratis en Bogotá o en taller de instalación",
-  "Garantía de 8 años",
-];
 
 export default function Warranty() {
   return (
