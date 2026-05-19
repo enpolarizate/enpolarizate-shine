@@ -34,12 +34,12 @@ export default function Hero() {
           </motion.span>
 
           <motion.h1
-            className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight"
+            className="mt-5 font-display sm:text-5xl lg:text-6xl font-bold leading-[1.08] tracking-tight text-3xl text-slate-50 border-slate-50"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           >
-            Descubre nuestro <span className="text-gold">Polarizado Nano Blindex</span> y encuentra privacidad, cuidado de la piel y seguridad en cada kilómetro.
+            Descubre en este video por qué tu carro sin polarizar es una puerta a riesgos... y cómo el <span className="text-gold">Nano Blindex Americano</span> puede darte privacidad, protección UV y una seguridad real en cada kilómetro
           </motion.h1>
 
           <motion.p
