@@ -11,7 +11,6 @@ import Warranty from "@/components/site/Warranty";
 import Wholesale from "@/components/site/Wholesale";
 import Stats from "@/components/site/Stats";
 import FAQ from "@/components/site/FAQ";
-import ContactForm from "@/components/site/ContactForm";
 import Footer from "@/components/site/Footer";
 import FloatingWhatsApp from "@/components/site/FloatingWhatsApp";
 
@@ -51,7 +50,6 @@ const Index = () => {
       <WhatYouGet />
       <Stats />
       <FAQ />
-      <ContactForm />
       <Footer />
       <FloatingWhatsApp />
     </main>
