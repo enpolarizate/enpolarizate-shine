@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import logo from "@/assets/logo.png";
+
 
 const links = [
   { href: "#tecnologia", label: "Tecnología" },
@@ -26,9 +26,8 @@ export default function Navbar() {
       }`}
     >
       <div className="container-pro flex items-center justify-between py-3 md:py-4 px-6">
-        <a href="#inicio" className="flex items-center">
-          <img src={logo} alt="ENPOLARÍZATE" className="h-9 md:h-11 w-auto" />
-        </a>
+        <a href="#inicio" className="flex items-center" aria-label="Inicio" />
+
 
         <nav className="flex items-center gap-8">
           {links.map((l) => (
