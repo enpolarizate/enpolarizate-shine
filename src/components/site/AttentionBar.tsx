@@ -6,7 +6,7 @@ export default function AttentionBar() {
       initial={{ opacity: 0, y: -8 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed top-0 inset-x-0 z-50 w-full text-center py-2 px-4 border-b border-gold/20 bg-[linear-gradient(90deg,hsl(0_0%_4%),hsl(40_30%_8%),hsl(0_0%_4%))]"
+      className="relative w-full text-center py-2 px-4"
     >
       <p className="text-xs md:text-sm leading-snug text-foreground/90 font-bold">
         <span aria-hidden>🚨</span>{" "}

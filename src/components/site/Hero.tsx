@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import { WHATSAPP_URL } from "./FloatingWhatsApp";
+import AttentionBar from "./AttentionBar";
 import logo from "@/assets/logo.png";
 
 export default function Hero() {
@@ -22,6 +23,8 @@ export default function Hero() {
       />
       {/* Light streak */}
       <div aria-hidden className="absolute inset-x-0 top-24 md:top-28 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+
+      <AttentionBar />
 
       <div className="container-pro grid lg:grid-cols-2 gap-12 lg:gap-16 items-center px-6 relative">
         <div>
