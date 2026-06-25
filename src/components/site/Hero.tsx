@@ -31,7 +31,7 @@ export default function Hero() {
           <motion.img
             src={logo}
             alt="ENPOLARÍZATE"
-            className="h-16 md:h-20 w-auto mb-5"
+            className="h-20 md:h-24 w-auto mb-5"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.8 }}
