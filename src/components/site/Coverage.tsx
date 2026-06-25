@@ -49,7 +49,14 @@ export default function Coverage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1 h-2 w-2 rounded-full bg-gold flex-shrink-0" />
-                  <span className="text-foreground/90">Puerto Norte – entrada 4, local 79</span>
+                  <a
+                    href="https://www.google.com/maps/place/Centro+Comercial+Puerto+Norte,+01,+Cl.+195+%2321,+Bogot%C3%A1/@4.7727275,-74.0416167,17z/data=!4m6!3m5!1s0x8e3f85f1d7008983:0x959769c8b47236c2!8m2!3d4.7727275!4d-74.0416167!16s%2Fg%2F1pv5xz0jn?g_ep=Eg1tbF8yMDI2MDUxM18wIOC7DCoASAJQAg%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground/90 underline underline-offset-4 decoration-gold/60 hover:decoration-gold hover:text-gold transition-colors"
+                  >
+                    Puerto Norte – entrada 4, local 79
+                  </a>
                 </li>
               </ul>
               <p className="mt-6 text-sm text-muted-foreground italic">
