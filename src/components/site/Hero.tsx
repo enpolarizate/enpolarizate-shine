@@ -2,13 +2,15 @@ import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import { WHATSAPP_URL } from "./FloatingWhatsApp";
 import AttentionBar from "./AttentionBar";
+import Navbar from "./Navbar";
 
 import logo from "@/assets/logo.png";
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative min-h-[85vh] flex flex-col items-center pt-20 md:pt-24 pb-12 overflow-hidden">
+    <section id="inicio" className="relative min-h-[85vh] flex flex-col items-center pt-2 pb-12 overflow-hidden">
       <AttentionBar />
+      <Navbar />
       {/* Ambient backgrounds */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,hsl(0_0%_10%),hsl(0_0%_4%))]" />
       <motion.div
