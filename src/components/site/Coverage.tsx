@@ -45,7 +45,14 @@ export default function Coverage() {
               <ul className="mt-6 space-y-4">
                 <li className="flex items-start gap-3">
                   <span className="mt-1 h-2 w-2 rounded-full bg-gold flex-shrink-0" />
-                  <span className="text-foreground/90">Cl. 185 #56 - 14 (cerca a Centro Comercial Santa Fe)</span>
+                  <a
+                    href="https://www.google.com/maps/place/Stilos+Security+Films+Colombia,+Cl.+185+%2356+-+14,+Bogot%C3%A1/@4.7655456,-74.0516357,17z/data=!4m14!1m7!3m6!1s0x8e3f859531263143:0x88150f4e5c6831e7!2sCl.+185+%2356+-+14,+Bogot%C3%A1!8m2!3d4.7655392!4d-74.0516286!16s%2Fg%2F11j3nbzgjk!3m5!1s0x8e3f85edf43173ed:0x6d90ee07236ab04!8m2!3d4.7655456!4d-74.0516357!16s%2Fg%2F11p_7dwb6c?g_ep=Eg1tbF8yMDI2MDUxM18wIOC7DCoASAJQAg%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground/90 underline underline-offset-4 decoration-gold/60 hover:decoration-gold hover:text-gold transition-colors"
+                  >
+                    Cl. 185 #56 - 14 (cerca a Centro Comercial Santa Fe)
+                  </a>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1 h-2 w-2 rounded-full bg-gold flex-shrink-0" />
