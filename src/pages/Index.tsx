@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import Navbar from "@/components/site/Navbar";
 
 import Hero from "@/components/site/Hero";
 import TintOptions from "@/components/site/TintOptions";
