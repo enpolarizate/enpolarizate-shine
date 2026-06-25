@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Navbar from "@/components/site/Navbar";
-import AttentionBar from "@/components/site/AttentionBar";
+
 import Hero from "@/components/site/Hero";
 import TintOptions from "@/components/site/TintOptions";
 import NanoTech from "@/components/site/NanoTech";
