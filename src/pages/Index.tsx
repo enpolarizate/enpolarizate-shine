@@ -13,7 +13,7 @@ import Wholesale from "@/components/site/Wholesale";
 import Stats from "@/components/site/Stats";
 import FAQ from "@/components/site/FAQ";
 import Footer from "@/components/site/Footer";
-import AttentionBar from "@/components/site/AttentionBar";
+
 import FloatingWhatsApp from "@/components/site/FloatingWhatsApp";
 
 const Index = () => {
@@ -39,7 +39,6 @@ const Index = () => {
 
   return (
     <main className="bg-background text-foreground overflow-x-hidden">
-      <AttentionBar />
       <Navbar />
       <Hero />
       
