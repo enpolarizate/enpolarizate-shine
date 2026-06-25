@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Play, AlertTriangle } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import { WHATSAPP_URL } from "./FloatingWhatsApp";
 import logo from "@/assets/logo.png";
 
