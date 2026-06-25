@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import PoliticaPrivacidad from "./pages/PoliticaPrivacidad.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import CookieConsent from "./components/site/CookieConsent";
 
 const queryClient = new QueryClient();
 
@@ -21,7 +22,9 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CookieConsent />
       </BrowserRouter>
+
     </TooltipProvider>
   </QueryClientProvider>
 );
