@@ -23,22 +23,6 @@ export default function Hero() {
       {/* Light streak */}
       <div aria-hidden className="absolute inset-x-0 top-24 md:top-28 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
-      {/* Attention banner */}
-      <motion.div
-        className="w-full self-start py-2.5 md:py-3 text-center"
-        style={{ background: "var(--gradient-gold)" }}
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <span
-          className="inline-flex items-center gap-2 text-xs md:text-sm font-bold uppercase tracking-[0.15em]"
-          style={{ color: "hsl(var(--gold-foreground))" }}
-        >
-          🚨 Atención: Dueños de Carros, Camionetas, Pickups, Camiones ó Mulas SIN POLARIZAR...Esto es para ti 🚨
-        </span>
-      </motion.div>
-
       <div className="container-pro grid lg:grid-cols-2 gap-12 lg:gap-16 items-center px-6 relative">
         <div>
           <motion.img
