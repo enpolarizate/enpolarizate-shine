@@ -37,8 +37,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.8 }}
             />
-            <div aria-hidden className="absolute left-0 right-0 top-full mt-1 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
           </div>
+          <div aria-hidden className="relative left-1/2 -translate-x-1/2 w-screen h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
           <motion.span
             className="eyebrow"
             initial={{ opacity: 0, y: 12 }}
