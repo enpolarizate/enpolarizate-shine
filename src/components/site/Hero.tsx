@@ -25,8 +25,6 @@ export default function Hero() {
         animate={{ x: [0, -20, 0], y: [0, -25, 0] }}
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
-      {/* Light streak */}
-      <div aria-hidden className="absolute inset-x-0 top-24 md:top-28 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
 
       <div className="container-pro grid lg:grid-cols-2 gap-12 lg:gap-16 items-center px-6 relative">
         <div>
