@@ -17,7 +17,7 @@ export default function Navbar() {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-0 inset-x-0 z-40 transition-all duration-500 ${
+      className={`fixed top-9 md:top-10 inset-x-0 z-40 transition-all duration-500 ${
         scrolled ? "bg-background/85 backdrop-blur-xl border-b border-border/60" : "bg-transparent"
       }`}
     >

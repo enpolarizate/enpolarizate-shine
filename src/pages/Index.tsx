@@ -38,7 +38,7 @@ const Index = () => {
 
   return (
     <main className="bg-background text-foreground overflow-x-hidden">
-      
+      <AttentionBar />
       <Navbar />
       <Hero />
       
