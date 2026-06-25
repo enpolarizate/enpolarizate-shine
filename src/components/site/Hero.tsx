@@ -28,16 +28,14 @@ export default function Hero() {
 
       <div className="container-pro grid lg:grid-cols-2 gap-12 lg:gap-16 items-center px-6 relative">
         <div>
-          <div className="relative inline-block mb-5">
-            <motion.img
-              src={logo}
-              alt="ENPOLARÍZATE"
-              className="h-16 md:h-20 w-auto"
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.8 }}
-            />
-          </div>
+          <motion.img
+            src={logo}
+            alt="ENPOLARÍZATE"
+            className="h-16 md:h-20 w-auto mb-5"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.8 }}
+          />
           
           <motion.span
             className="eyebrow"
