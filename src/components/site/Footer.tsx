@@ -7,7 +7,7 @@ const links = [
   { href: "#tecnologia", label: "Tecnología" },
   { href: "#testimonios", label: "Testimonios" },
   { href: "#faq", label: "FAQ" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/politica-privacidad", label: "POLÍTICA DE PRIVACIDAD — ENPOLARÍZATE" },
 ];
 
 export default function Footer() {
