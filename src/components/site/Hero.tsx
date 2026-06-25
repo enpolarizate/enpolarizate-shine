@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import { WHATSAPP_URL } from "./FloatingWhatsApp";
+import AttentionBar from "./AttentionBar";
 import logo from "@/assets/logo.png";
 
 export default function Hero() {
