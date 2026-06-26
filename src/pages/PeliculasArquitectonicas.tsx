@@ -544,7 +544,7 @@ const textTestimonialsArq = [
 function Testimonials() {
   return (
     <section className="bg-background text-foreground">
-      <div className="mx-auto max-w-7xl px-4 py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-4 py-10 md:py-14">
         <Reveal>
           <div className="text-center">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--gold)]">Testimonios reales</p>
