@@ -135,7 +135,7 @@ function Hero() {
   return (
     <section id="top" className="relative bg-hero overflow-hidden">
       <div className="pointer-events-none absolute inset-0 [background-image:radial-gradient(circle_at_1px_1px,oklch(1_0_0/0.04)_1px,transparent_0)] [background-size:32px_32px]" />
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-4 py-14 md:py-20">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-4 pt-6 pb-14 md:pt-10 md:pb-20">
         <Reveal>
           <span className="mx-auto inline-flex items-center gap-2 rounded-full border border-[oklch(0.82_0.14_85/0.3)] bg-[oklch(0.82_0.14_85/0.08)] px-3 py-1 text-xs font-medium text-[var(--gold-soft)]">
             <Sparkles className="h-3.5 w-3.5" /> Tecnología Nanocerámica Americana
