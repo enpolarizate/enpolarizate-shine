@@ -518,8 +518,8 @@ function InstallSection() {
               <p className="mt-7 text-foreground/80">Esto permite:</p>
               <div className="mt-3 grid gap-3 sm:grid-cols-3">
                 {["Mayor durabilidad", "Mejor rendimiento térmico", "Protección más eficiente según el proyecto"].map((t, i) => (
-                  <Reveal key={t} delay={i * 100}>
-                    <div className="glass-card rounded-xl p-4 text-sm font-semibold">{t}</div>
+                  <Reveal key={t} delay={i * 100} className="h-full">
+                    <div className="glass-card rounded-xl p-4 text-sm font-semibold h-full flex items-center justify-center text-center">{t}</div>
                   </Reveal>
                 ))}
               </div>
