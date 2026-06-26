@@ -158,7 +158,7 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={100} className="w-full">
-          <h1 className="mx-auto mt-5 max-w-[24ch] text-center text-3xl font-extrabold leading-[1.1] md:text-4xl lg:text-5xl">
+          <h1 className="mx-auto mt-5 max-w-5xl text-center text-2xl font-extrabold leading-[1.15] md:text-3xl lg:text-4xl">
             Descubre cómo una <span className="text-gradient-gold">película de seguridad en los cristales de tu inmueble</span> reduce el calor, mejora la privacidad y protege tu espacio.
           </h1>
         </Reveal>
