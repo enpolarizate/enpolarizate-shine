@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import PoliticaPrivacidad from "./pages/PoliticaPrivacidad.tsx";
+import PeliculasArquitectonicas from "./pages/PeliculasArquitectonicas.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import CookieConsent from "./components/site/CookieConsent";
 
@@ -19,6 +20,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
+          <Route path="/peliculas-arquitectonicas" element={<PeliculasArquitectonicas />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
