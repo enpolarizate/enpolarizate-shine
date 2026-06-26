@@ -11,6 +11,15 @@ import heroImg from "@/assets/arquitectonico/hero.jpg";
 import tintsImg from "@/assets/arquitectonico/tints.jpg";
 import installImg from "@/assets/arquitectonico/install.jpg";
 import buildingImg from "@/assets/arquitectonico/building.jpg";
+import techViews from "@/assets/tech/views.jpg";
+import techEnergy from "@/assets/tech/energy.jpg";
+import techPrivacy from "@/assets/tech/privacy.jpg";
+import techDamage from "@/assets/tech/damage.jpg";
+import techUv from "@/assets/tech/uv.jpg";
+import techHeat from "@/assets/tech/heat.jpg";
+import techFurniture from "@/assets/tech/furniture.jpg";
+import techGlare from "@/assets/tech/glare.jpg";
+import techVandalism from "@/assets/tech/vandalism.jpg";
 
 const WHATSAPP_URL = "https://wa.link/yjf1m1";
 const WA_DEFAULT = WHATSAPP_URL;
