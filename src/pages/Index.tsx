@@ -8,6 +8,7 @@ import Testimonials from "@/components/site/Testimonials";
 import Coverage from "@/components/site/Coverage";
 import WhatYouGet from "@/components/site/WhatYouGet";
 import Warranty from "@/components/site/Warranty";
+import Gallery from "@/components/site/Gallery";
 import Wholesale from "@/components/site/Wholesale";
 import Stats from "@/components/site/Stats";
 import FAQ from "@/components/site/FAQ";
@@ -45,6 +46,7 @@ const Index = () => {
       <NanoTech />
       <Benefits />
       <Testimonials />
+      <Gallery />
       <Warranty />
       <Wholesale />
       <Coverage />
