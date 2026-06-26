@@ -224,3 +224,49 @@
   50% { box-shadow: 0 0 0 14px hsl(var(--gold) / 0), var(--shadow-gold-lg); }
 }
 .animate-pulse-glow { animation: pulse-glow 2.6s var(--ease-premium) infinite; }
+
+/* ============================================================== */
+/* Scoped styles for /peliculas-arquitectonicas (ported landing)  */
+/* ============================================================== */
+.arq-page {
+  --gold: oklch(0.68 0.13 75);
+  --gold-soft: oklch(0.87 0.13 90);
+  --gold-deep: oklch(0.46 0.12 65);
+  --ink: oklch(0.14 0 0);
+  --whatsapp: oklch(0.65 0.16 150);
+  --gradient-gold: linear-gradient(135deg, oklch(0.46 0.12 65), oklch(0.68 0.13 75) 45%, oklch(0.87 0.13 90));
+  --gradient-hero: radial-gradient(ellipse at 50% 30%, oklch(0.68 0.13 75 / 0.22) 0%, transparent 60%),
+                   radial-gradient(ellipse at 80% 80%, oklch(0.46 0.12 65 / 0.18) 0%, transparent 55%),
+                   linear-gradient(180deg, oklch(0.14 0 0), oklch(0.13 0 0));
+  --shadow-gold: 0 10px 40px -10px oklch(0.68 0.13 75 / 0.45);
+  --shadow-gold-lg: 0 20px 60px -15px oklch(0.68 0.13 75 / 0.55);
+  --shadow-card: 0 20px 50px -20px oklch(0 0 0 / 0.7);
+}
+.arq-page .text-gradient-gold {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.arq-page .bg-hero { background: var(--gradient-hero); }
+.arq-page .glass-card {
+  background: linear-gradient(180deg, oklch(1 0 0 / 0.04), oklch(1 0 0 / 0.01));
+  border: 1px solid oklch(1 0 0 / 0.08);
+  backdrop-filter: blur(10px);
+}
+.arq-page .btn-gold {
+  background: var(--gradient-gold);
+  color: oklch(0.13 0.005 250);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: var(--shadow-gold);
+  padding: 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+.arq-page .btn-gold::before { display: none; }
+.arq-page .btn-gold-hover:hover { transform: translateY(-2px); filter: brightness(1.08); }
+@keyframes arq-glow {
+  0%, 100% { box-shadow: 0 0 24px -6px oklch(0.78 0.14 85 / 0.5); }
+  50% { box-shadow: 0 0 48px -4px oklch(0.78 0.14 85 / 0.75); }
+}
+.arq-page .arq-glow { animation: arq-glow 3s ease-in-out infinite; }
