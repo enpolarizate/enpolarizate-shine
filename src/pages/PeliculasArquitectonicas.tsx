@@ -466,7 +466,7 @@ function Protection() {
                       className="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                    <div className="absolute top-3 left-3 flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--gradient-gold)] text-[var(--ink)] shadow-[var(--shadow-gold)] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+                    <div className="absolute top-3 left-3 flex h-11 w-11 items-center justify-center rounded-none bg-[var(--gradient-gold)] text-[var(--ink)] shadow-[var(--shadow-gold)] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
                       <Icon className="h-5 w-5" />
                     </div>
                   </div>
