@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { Reveal } from "./motion";
 
 import corvette from "@/assets/gallery/car-corvette.jpg.asset.json";
@@ -18,16 +17,9 @@ const images = [
 
 export default function Gallery() {
   const trackRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: trackRef,
-    offset: ["start start", "end end"],
-  });
-
-  // Move from 0% to roughly -(N-1)/N * 100% so the last card lands in view.
-  const x = useTransform(scrollYProgress, [0, 1], ["2%", "-78%"]);
 
   return (
-    <section className="relative bg-background">
+    <section className="relative bg-background overflow-hidden">
       {/* Header */}
       <div className="container-pro pt-14 md:pt-20 pb-6">
         <Reveal className="text-center max-w-3xl mx-auto">
@@ -41,61 +33,40 @@ export default function Gallery() {
         </Reveal>
       </div>
 
-      {/* Desktop: horizontal scroll on scroll */}
-      <div ref={trackRef} className="relative hidden md:block h-[220vh]">
-        <div className="sticky top-0 h-screen flex items-center overflow-hidden">
-          <motion.div style={{ x }} className="flex gap-8 pl-[6vw] will-change-transform">
-            {images.map((img, i) => (
-              <div
-                key={i}
-                className="relative shrink-0 w-[70vw] lg:w-[55vw] xl:w-[48vw] aspect-[16/10] rounded-2xl overflow-hidden border border-gold/30 bg-black shadow-[var(--shadow-elegant)]"
-              >
-                <img
-                  src={img.src}
-                  alt={`Polarizado ${img.label}`}
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/85 via-black/40 to-transparent">
-                  <div className="flex items-center justify-between gap-4">
-                    <span className="font-display text-xl font-bold text-foreground">{img.label}</span>
-                    <span className="px-3 py-1 rounded-full text-xs font-semibold bg-gold/15 border border-gold/40 text-gold-light">
-                      {img.tint}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Mobile: native horizontal snap scroll */}
-      <div className="md:hidden pb-14">
-        <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory px-6 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      {/* Infinite auto-scroll carousel */}
+      <div ref={trackRef} className="relative py-6 md:py-10">
+        <div className="flex gap-6 md:gap-8 animate-scroll-right will-change-transform">
+          {/* Original set */}
           {images.map((img, i) => (
-            <div
-              key={i}
-              className="relative shrink-0 w-[85vw] aspect-[4/3] rounded-2xl overflow-hidden border border-gold/30 bg-black shadow-[var(--shadow-elegant)] snap-center"
-            >
-              <img
-                src={img.src}
-                alt={`Polarizado ${img.label}`}
-                loading="lazy"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/85 to-transparent">
-                <div className="flex items-center justify-between gap-3">
-                  <span className="font-display text-base font-bold text-foreground">{img.label}</span>
-                  <span className="px-2.5 py-1 rounded-full text-[10px] font-semibold bg-gold/15 border border-gold/40 text-gold-light">
-                    {img.tint}
-                  </span>
-                </div>
-              </div>
-            </div>
+            <GalleryCard key={`a-${i}`} img={img} />
+          ))}
+          {/* Duplicated set for seamless loop */}
+          {images.map((img, i) => (
+            <GalleryCard key={`b-${i}`} img={img} />
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function GalleryCard({ img }: { img: typeof images[0] }) {
+  return (
+    <div className="relative shrink-0 w-[85vw] md:w-[55vw] lg:w-[45vw] xl:w-[38vw] aspect-[16/10] rounded-2xl overflow-hidden border border-gold/30 bg-black shadow-[var(--shadow-elegant)]">
+      <img
+        src={img.src}
+        alt={`Polarizado ${img.label}`}
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-x-0 bottom-0 p-4 md:p-5 bg-gradient-to-t from-black/85 via-black/40 to-transparent">
+        <div className="flex items-center justify-between gap-4">
+          <span className="font-display text-base md:text-xl font-bold text-foreground">{img.label}</span>
+          <span className="px-3 py-1 rounded-full text-[10px] md:text-xs font-semibold bg-gold/15 border border-gold/40 text-gold-light">
+            {img.tint}
+          </span>
+        </div>
+      </div>
+    </div>
   );
 }
