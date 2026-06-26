@@ -53,7 +53,7 @@ export default function Gallery() {
 
 function GalleryCard({ img }: { img: typeof images[0] }) {
   return (
-    <div className="relative shrink-0 w-[75vw] md:w-[48vw] lg:w-[40vw] xl:w-[34vw] aspect-[16/10] rounded-2xl overflow-hidden border border-gold/30 bg-black shadow-[var(--shadow-elegant)]">
+    <div className="relative shrink-0 w-[65vw] md:w-[38vw] lg:w-[30vw] xl:w-[26vw] aspect-[16/10] rounded-2xl overflow-hidden border border-gold/30 bg-black shadow-[var(--shadow-elegant)]">
       <img
         src={img.src}
         alt={`Polarizado ${img.label}`}
