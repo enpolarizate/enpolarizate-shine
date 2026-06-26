@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { Reveal } from "./motion";
 
 import corvette from "@/assets/gallery/car-corvette.jpg.asset.json";
@@ -16,8 +15,6 @@ const images = [
 ];
 
 export default function Gallery() {
-  const trackRef = useRef<HTMLDivElement>(null);
-
   return (
     <section className="relative bg-background overflow-hidden">
       {/* Header */}
@@ -34,16 +31,20 @@ export default function Gallery() {
       </div>
 
       {/* Infinite auto-scroll carousel */}
-      <div ref={trackRef} className="relative py-6 md:py-10">
-        <div className="flex gap-6 md:gap-8 animate-scroll-right will-change-transform">
-          {/* Original set */}
-          {images.map((img, i) => (
-            <GalleryCard key={`a-${i}`} img={img} />
-          ))}
-          {/* Duplicated set for seamless loop */}
-          {images.map((img, i) => (
-            <GalleryCard key={`b-${i}`} img={img} />
-          ))}
+      <div className="relative py-6 md:py-10 overflow-hidden">
+        <div className="flex animate-scroll-right will-change-transform">
+          {/* Group A */}
+          <div className="flex gap-6 md:gap-8 shrink-0 pr-6 md:pr-8">
+            {images.map((img, i) => (
+              <GalleryCard key={`a-${i}`} img={img} />
+            ))}
+          </div>
+          {/* Group B (identical loop) */}
+          <div className="flex gap-6 md:gap-8 shrink-0">
+            {images.map((img, i) => (
+              <GalleryCard key={`b-${i}`} img={img} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
