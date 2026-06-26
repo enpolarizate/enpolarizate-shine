@@ -742,39 +742,13 @@ function FinalCta() {
           <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Descubre cuál es la película ideal para tu espacio y recibe asesoría profesional según tu necesidad.
           </p>
-          <PrivacyGatedCta />
+          <div className="mt-10 flex flex-col items-center">
+            <CtaButton className="!px-9 !py-5 !text-base">Recibir asesoría por WhatsApp</CtaButton>
+            <SupportLine />
+          </div>
         </Reveal>
       </div>
     </section>
-  );
-}
-
-function PrivacyGatedCta() {
-  const [accepted, setAccepted] = useState(false);
-  return (
-    <div className="mt-10 flex flex-col items-center">
-      <label className="mb-5 flex max-w-xl cursor-pointer items-start gap-3 text-left text-sm text-muted-foreground">
-        <input
-          type="checkbox"
-          checked={accepted}
-          onChange={(e) => setAccepted(e.target.checked)}
-          className="mt-1 h-4 w-4 shrink-0 cursor-pointer accent-[var(--gold)]"
-        />
-        <span>
-          Acepto la{" "}
-          <Link to="/politica-privacidad" className="text-[var(--gold)] underline underline-offset-2 hover:opacity-80">
-            Política de Privacidad
-          </Link>{" "}
-          y el tratamiento de mis datos personales para recibir asesoría por WhatsApp.
-        </span>
-      </label>
-      <CtaButton
-        className={`!px-9 !py-5 !text-base ${accepted ? "" : "pointer-events-none opacity-50"}`}
-      >
-        Recibir asesoría por WhatsApp
-      </CtaButton>
-      <SupportLine />
-    </div>
   );
 }
 
