@@ -537,11 +537,6 @@ function InstallSection() {
 
 /* ---------------- 7. Testimonials ---------------- */
 function Testimonials() {
-  const videos = [
-    { id: "pWVwVaYAVlM", name: "Carolina M.", role: "Apartamento — Bogotá" },
-    { id: "pWVwVaYAVlM", name: "Andrés R.", role: "Oficina corporativa" },
-    { id: "pWVwVaYAVlM", name: "Laura G.", role: "Casa residencial" },
-  ];
   return (
     <section className="bg-background text-foreground">
       <div className="mx-auto max-w-7xl px-4 py-20 md:py-28">
@@ -551,20 +546,23 @@ function Testimonials() {
             <h2 className="mt-3 text-3xl md:text-5xl font-extrabold">Esto es lo que dicen nuestros clientes</h2>
           </div>
         </Reveal>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {videos.map((v, i) => (
-            <Reveal key={i} delay={i * 120}>
-              <div className="overflow-hidden glass-card rounded-2xl transition-transform hover:-translate-y-1">
-                <div className="aspect-video bg-black">
-                  <iframe className="h-full w-full" src={`https://www.youtube.com/embed/${v.id}`} title={`Testimonio ${v.name}`} allowFullScreen />
-                </div>
-                <div className="p-5">
-                  <p className="font-bold">{v.name}</p>
-                  <p className="text-sm text-muted-foreground">{v.role}</p>
+        <div className="mt-12 flex justify-center">
+          <Reveal>
+            <div className="relative w-full max-w-[380px]">
+              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-[var(--gold)]/40 via-transparent to-white/10 blur-2xl opacity-70" />
+              <div className="relative overflow-hidden glass-card rounded-2xl border border-[var(--gold)]/30 bg-black">
+                <div className="aspect-[9/16] w-full">
+                  <iframe
+                    className="h-full w-full"
+                    src="https://www.youtube.com/embed/ACAfc8BCjQM?rel=0"
+                    title="Testimonio cliente ENPOLARÍZATE"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
                 </div>
               </div>
-            </Reveal>
-          ))}
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>
