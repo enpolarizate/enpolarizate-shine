@@ -180,20 +180,6 @@ function Hero() {
           </div>
         </Reveal>
 
-        <Reveal delay={300}>
-          <div className="mt-8 grid w-full max-w-md grid-cols-3 gap-4">
-            {[
-              { n: "16+", l: "Años" },
-              { n: "8 años", l: "Garantía" },
-              { n: "Nacional", l: "Cobertura" },
-            ].map((s) => (
-              <div key={s.l} className="glass-card rounded-xl p-3 text-center">
-                <div className="text-lg md:text-xl font-extrabold text-gradient-gold">{s.n}</div>
-                <div className="mt-0.5 text-[10px] md:text-xs uppercase tracking-wider text-muted-foreground">{s.l}</div>
-              </div>
-            ))}
-          </div>
-        </Reveal>
       </div>
     </section>
   );
