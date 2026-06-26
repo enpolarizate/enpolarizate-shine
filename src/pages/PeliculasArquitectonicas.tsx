@@ -818,6 +818,9 @@ function Footer() {
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-[oklch(1_0_0/0.06)] pt-6 text-xs text-muted-foreground md:flex-row">
           <p>© {new Date().getFullYear()} ENPOLARÍZATE. Todos los derechos reservados.</p>
+          <Link to="/politica-privacidad" className="transition-colors hover:text-[var(--gold)]">
+            Política de Privacidad
+          </Link>
           <p>Protege tu camino y Enpolarízate.</p>
         </div>
       </div>
