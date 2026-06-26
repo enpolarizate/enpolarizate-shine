@@ -774,6 +774,11 @@ function PrivacyGatedCta() {
         Recibir asesoría por WhatsApp
       </CtaButton>
       <SupportLine />
+    </div>
+  );
+}
+
+
 
 /* ---------------- 15. Footer ---------------- */
 function Footer() {
