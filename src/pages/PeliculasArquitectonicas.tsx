@@ -139,7 +139,7 @@ function Header() {
         <a href="#top" className="flex items-center gap-2">
           <img src={logo} alt="ENPOLARÍZATE" className="h-9 md:h-11 w-auto" />
         </a>
-        <CtaButton className="hidden sm:inline-flex !px-5 !py-2.5 !text-xs">Asesoría WhatsApp</CtaButton>
+        
       </div>
     </header>
   );
