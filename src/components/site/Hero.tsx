@@ -26,76 +26,74 @@ export default function Hero() {
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      <div className="container-pro grid lg:grid-cols-2 gap-12 lg:gap-16 items-center px-6 relative">
-        <div>
-          <motion.img
-            src={logo}
-            alt="ENPOLARÍZATE"
-            className="h-20 md:h-24 w-auto mb-5"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.8 }}
-          />
-          
-          <motion.span
-            className="eyebrow"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            Polarizado Nano Blindex
-          </motion.span>
+      <div className="container-pro flex flex-col items-center text-center px-6 relative">
+        <motion.img
+          src={logo}
+          alt="ENPOLARÍZATE"
+          className="h-20 md:h-24 w-auto mb-5"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.8 }}
+        />
+        
+        <motion.span
+          className="eyebrow"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
+          Polarizado Nano Blindex
+        </motion.span>
 
-          <motion.h1
-            className="mt-5 font-display font-bold leading-[1.08] tracking-tight border-slate-50 text-slate-50 text-3xl"
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          >
-            Descubre en este video <span className="text-amber-500">por qué tu carro sin polarizar</span> es una puerta a riesgos... y cómo el <span className="text-amber-500">Nano Blindex Americano</span> puede darte privacidad, protección UV y una seguridad real en cada kilómetro
-          </motion.h1>
+        <motion.h1
+          className="mt-5 font-display font-bold leading-[1.08] tracking-tight border-slate-50 text-slate-50 text-3xl max-w-4xl"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.35, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+        >
+          Descubre en este video <span className="text-amber-500">por qué tu carro sin polarizar</span> es una puerta a riesgos... y cómo el <span className="text-amber-500">Nano Blindex Americano</span> puede darte privacidad, protección UV y una seguridad real en cada kilómetro
+        </motion.h1>
 
-          <motion.p
-            className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.55, duration: 0.8 }}
-          >
-            Pregunta por una asesoría gratuita con instalación en tu ubicación.
-          </motion.p>
+        <motion.p
+          className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.55, duration: 0.8 }}
+        >
+          Pregunta por una asesoría gratuita con instalación en tu ubicación.
+        </motion.p>
 
-          <motion.div
-            className="mt-9 flex flex-wrap items-center gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-          >
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-gold">
-              Cotizar mi Polarizado! <ArrowRight className="h-5 w-5" />
-            </a>
-            <a href="#tecnologia" className="btn-outline-gold">Conoce la tecnología</a>
-          </motion.div>
+        <motion.div
+          className="mt-9 flex flex-wrap justify-center items-center gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+        >
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-gold">
+            Cotizar mi Polarizado! <ArrowRight className="h-5 w-5" />
+          </a>
+          <a href="#tecnologia" className="btn-outline-gold">Conoce la tecnología</a>
+        </motion.div>
 
-          <motion.div
-            className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted-foreground"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.95, duration: 0.8 }}
-          >
-            <span>Instalación profesional</span>
-            <span className="h-1 w-1 rounded-full bg-gold" />
-            <span>Asesoría gratuita</span>
-            <span className="h-1 w-1 rounded-full bg-gold" />
-            <span>Instalación en tu ubicación</span>
-          </motion.div>
-        </div>
+        <motion.div
+          className="mt-10 flex flex-wrap justify-center items-center gap-x-3 gap-y-2 text-sm text-muted-foreground"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.95, duration: 0.8 }}
+        >
+          <span>Instalación profesional</span>
+          <span className="h-1 w-1 rounded-full bg-gold" />
+          <span>Asesoría gratuita</span>
+          <span className="h-1 w-1 rounded-full bg-gold" />
+          <span>Instalación en tu ubicación</span>
+        </motion.div>
 
         {/* VSL */}
         <motion.div
           initial={{ opacity: 0, scale: 0.92, y: 24 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-          className="relative"
+          className="relative w-full max-w-4xl mt-12"
         >
           <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-gold/40 via-transparent to-[hsl(0_0%_60%/0.3)] blur-2xl opacity-70" />
           <div className="relative rounded-2xl overflow-hidden border border-gold/30 bg-black shadow-[var(--shadow-gold-lg)]">
