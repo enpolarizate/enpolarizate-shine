@@ -17,9 +17,21 @@ export default function Testimonials() {
           </h2>
         </Reveal>
 
-        <div className="mt-14 flex flex-col items-center gap-10">
-          {/* Video testimonial (YouTube Shorts) - centered */}
-          <Reveal className="flex justify-center">
+        <div className="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-center">
+          {/* Left text testimonial */}
+          <Reveal className="order-2 lg:order-1">
+            <article className="premium-card h-full flex flex-col p-6">
+              <Quote className="h-7 w-7 text-gold mb-3" />
+              <p className="text-base text-foreground/85 leading-relaxed flex-1">{textTestimonials[0].text}</p>
+              <div className="mt-5 pt-4 border-t border-border">
+                <div className="text-foreground font-bold">{textTestimonials[0].name}</div>
+                <div className="text-xs text-gold-light">{textTestimonials[0].vehicle}</div>
+              </div>
+            </article>
+          </Reveal>
+
+          {/* Center video testimonial (YouTube Shorts) */}
+          <Reveal className="order-1 lg:order-2 flex justify-center">
             <div className="relative w-full max-w-[380px]">
               <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-gold/40 via-transparent to-[hsl(0_0%_60%/0.3)] blur-2xl opacity-70" />
               <div className="relative rounded-2xl overflow-hidden border border-gold/30 bg-black shadow-[var(--shadow-gold-lg)]">
@@ -36,21 +48,17 @@ export default function Testimonials() {
             </div>
           </Reveal>
 
-          {/* Text testimonials */}
-          <div className="w-full max-w-3xl grid sm:grid-cols-2 gap-6 md:gap-8">
-            {textTestimonials.map((t, i) => (
-              <Reveal key={i}>
-                <article className="premium-card h-full flex flex-col p-6">
-                  <Quote className="h-7 w-7 text-gold mb-3" />
-                  <p className="text-base text-foreground/85 leading-relaxed flex-1">{t.text}</p>
-                  <div className="mt-5 pt-4 border-t border-border">
-                    <div className="text-foreground font-bold">{t.name}</div>
-                    <div className="text-xs text-gold-light">{t.vehicle}</div>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+          {/* Right text testimonial */}
+          <Reveal className="order-3">
+            <article className="premium-card h-full flex flex-col p-6">
+              <Quote className="h-7 w-7 text-gold mb-3" />
+              <p className="text-base text-foreground/85 leading-relaxed flex-1">{textTestimonials[1].text}</p>
+              <div className="mt-5 pt-4 border-t border-border">
+                <div className="text-foreground font-bold">{textTestimonials[1].name}</div>
+                <div className="text-xs text-gold-light">{textTestimonials[1].vehicle}</div>
+              </div>
+            </article>
+          </Reveal>
         </div>
       </div>
     </section>
