@@ -205,20 +205,20 @@ function Tints() {
           </div>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 md:grid-cols-3 items-stretch">
           {opts.map((o, i) => (
-            <Reveal key={o.p} delay={i * 120}>
-              <div className="group relative overflow-hidden glass-card rounded-2xl transition-transform duration-500 hover:-translate-y-1">
+            <Reveal key={o.p} delay={i * 120} className="h-full">
+              <div className="group relative overflow-hidden glass-card rounded-2xl transition-transform duration-500 hover:-translate-y-1 h-full flex flex-col">
                 {o.badge && (
                   <span className="absolute right-4 top-4 z-10 rounded-full bg-[var(--gradient-gold)] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[var(--ink)]">{o.badge}</span>
                 )}
-                <div className="relative h-44 overflow-hidden" style={{ background: o.shade }}>
+                <div className="relative h-44 overflow-hidden flex-shrink-0" style={{ background: o.shade }}>
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(1_0_0/0.18),transparent_60%)]" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="text-6xl font-extrabold tracking-tight text-white drop-shadow-lg">{o.p}</span>
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex-grow flex flex-col justify-center">
                   <h3 className="text-lg font-bold">{o.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{o.desc}</p>
                 </div>
