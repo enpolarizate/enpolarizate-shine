@@ -17,10 +17,10 @@ export default function Testimonials() {
           </h2>
         </Reveal>
 
-        <div className="mt-14 grid lg:grid-cols-5 gap-6 md:gap-8 items-center">
-          {/* Video testimonial (YouTube Shorts) */}
-          <Reveal className="lg:col-span-2 flex justify-center">
-            <div className="relative w-full max-w-[340px]">
+        <div className="mt-14 flex flex-col items-center gap-10">
+          {/* Video testimonial (YouTube Shorts) - centered */}
+          <Reveal className="flex justify-center">
+            <div className="relative w-full max-w-[380px]">
               <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-gold/40 via-transparent to-[hsl(0_0%_60%/0.3)] blur-2xl opacity-70" />
               <div className="relative rounded-2xl overflow-hidden border border-gold/30 bg-black shadow-[var(--shadow-gold-lg)]">
                 <div className="aspect-[9/16] w-full">
@@ -37,7 +37,7 @@ export default function Testimonials() {
           </Reveal>
 
           {/* Text testimonials */}
-          <div className="lg:col-span-3 grid sm:grid-cols-2 gap-6 md:gap-8">
+          <div className="w-full max-w-3xl grid sm:grid-cols-2 gap-6 md:gap-8">
             {textTestimonials.map((t, i) => (
               <Reveal key={i}>
                 <article className="premium-card h-full flex flex-col p-6">
