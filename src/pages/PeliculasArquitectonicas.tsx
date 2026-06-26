@@ -80,7 +80,6 @@ export default function PeliculasArquitectonicas() {
     <div className="arq-page min-h-screen bg-background text-foreground overflow-x-hidden">
       <StickyWhatsApp />
       <AlertBar />
-      <Header />
       <Hero />
       <Tints />
       <Tech />
@@ -128,20 +127,6 @@ function AlertBar() {
         </p>
       </div>
     </div>
-  );
-}
-
-/* ---------------- Header ---------------- */
-function Header() {
-  return (
-    <header className="sticky top-0 z-40 border-b border-[oklch(1_0_0/0.06)] bg-[oklch(0.11_0.012_50/0.75)] backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:py-4">
-        <a href="#top" className="flex items-center gap-2">
-          <img src={logo} alt="ENPOLARÍZATE" className="h-9 md:h-11 w-auto" />
-        </a>
-        
-      </div>
-    </header>
   );
 }
 
