@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Youtube, MessageCircle } from "lucide-react";
+import { Instagram, Facebook, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const links = [
