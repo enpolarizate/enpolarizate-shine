@@ -11,6 +11,15 @@ import heroImg from "@/assets/arquitectonico/hero.jpg";
 import tintsImg from "@/assets/arquitectonico/tints.jpg";
 import installImg from "@/assets/arquitectonico/install.jpg";
 import buildingImg from "@/assets/arquitectonico/building.jpg";
+import techViews from "@/assets/tech/views.jpg";
+import techEnergy from "@/assets/tech/energy.jpg";
+import techPrivacy from "@/assets/tech/privacy.jpg";
+import techDamage from "@/assets/tech/damage.jpg";
+import techUv from "@/assets/tech/uv.jpg";
+import techHeat from "@/assets/tech/heat.jpg";
+import techFurniture from "@/assets/tech/furniture.jpg";
+import techGlare from "@/assets/tech/glare.jpg";
+import techVandalism from "@/assets/tech/vandalism.jpg";
 
 const WHATSAPP_URL = "https://wa.link/yjf1m1";
 const WA_DEFAULT = WHATSAPP_URL;
@@ -260,15 +269,15 @@ function Tints() {
 /* ---------------- 4. Tech ---------------- */
 function Tech() {
   const benefits = [
-    { i: Eye, t: "Mantén tus vistas sin sacrificar la comodidad" },
-    { i: Zap, t: "Ahorro energético del 5 al 15 % con láminas para ventanas" },
-    { i: Palette, t: "Añade privacidad o diseño sin reemplazar tus ventanas" },
-    { i: Shield, t: "Reduce daños accidentales" },
-    { i: Sun, t: "Protege tu piel contra rayos UV" },
-    { i: Snowflake, t: "Rechazo avanzado de calor" },
-    { i: PaintBucket, t: "Rechaza rayos que deterioran muebles, pisos y objetos" },
-    { i: MonitorSmartphone, t: "Reduce deslumbramiento en pantallas y equipos" },
-    { i: ShieldCheck, t: "Evita daños costosos como grafitis y vandalismo" },
+    { i: Eye, t: "Mantén tus vistas sin sacrificar la comodidad", img: techViews },
+    { i: Zap, t: "Ahorro energético del 5 al 15 % con láminas para ventanas", img: techEnergy },
+    { i: Palette, t: "Añade privacidad o diseño sin reemplazar tus ventanas", img: techPrivacy },
+    { i: Shield, t: "Reduce daños accidentales", img: techDamage },
+    { i: Sun, t: "Protege tu piel contra rayos UV", img: techUv },
+    { i: Snowflake, t: "Rechazo avanzado de calor", img: techHeat },
+    { i: PaintBucket, t: "Rechaza rayos que deterioran muebles, pisos y objetos", img: techFurniture },
+    { i: MonitorSmartphone, t: "Reduce deslumbramiento en pantallas y equipos", img: techGlare },
+    { i: ShieldCheck, t: "Evita daños costosos como grafitis y vandalismo", img: techVandalism },
   ];
   return (
     <section className="relative overflow-hidden bg-[var(--ink)]">
@@ -293,21 +302,42 @@ function Tech() {
             </div>
           </Reveal>
         </div>
+      </div>
 
-        <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {benefits.map((b, i) => (
-            <Reveal key={b.t} delay={i * 70}>
-              <div className="group glass-card flex h-full items-start gap-4 rounded-xl p-5 transition-all duration-300 hover:border-[oklch(0.82_0.14_85/0.4)] hover:-translate-y-1">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[var(--gradient-gold)] text-[var(--ink)]">
-                  <b.i className="h-5 w-5" />
-                </div>
-                <p className="text-sm md:text-[15px] leading-snug text-foreground/90">{b.t}</p>
-              </div>
-            </Reveal>
-          ))}
+      {/* Infinite auto-scroll carousel of benefits */}
+      <div className="relative pb-16 md:pb-24 overflow-hidden">
+        <div className="flex animate-scroll-right will-change-transform">
+          <div className="flex gap-5 md:gap-6 shrink-0 pr-5 md:pr-6">
+            {benefits.map((b, i) => (
+              <BenefitCard key={`a-${i}`} b={b} />
+            ))}
+          </div>
+          <div className="flex gap-5 md:gap-6 shrink-0">
+            {benefits.map((b, i) => (
+              <BenefitCard key={`b-${i}`} b={b} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function BenefitCard({ b }: { b: { i: any; t: string; img: string } }) {
+  const Icon = b.i;
+  return (
+    <div className="relative shrink-0 w-[78vw] sm:w-[46vw] md:w-[34vw] lg:w-[26vw] xl:w-[22vw] rounded-2xl overflow-hidden border border-[oklch(0.82_0.14_85/0.35)] bg-black/40 shadow-[var(--shadow-card)]">
+      <div className="relative aspect-[16/10] overflow-hidden">
+        <img src={b.img} alt={b.t} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        <div className="absolute top-3 left-3 flex h-11 w-11 items-center justify-center rounded-lg bg-[var(--gradient-gold)] text-[var(--ink)] shadow-lg">
+          <Icon className="h-5 w-5" />
+        </div>
+      </div>
+      <div className="p-5">
+        <p className="text-sm md:text-[15px] leading-snug text-foreground/90 font-medium">{b.t}</p>
+      </div>
+    </div>
   );
 }
 
