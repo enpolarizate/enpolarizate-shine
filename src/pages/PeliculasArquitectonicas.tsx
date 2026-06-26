@@ -304,22 +304,76 @@ function Tech() {
         </div>
       </div>
 
-      {/* Infinite auto-scroll carousel of benefits */}
-      <div className="relative pb-16 md:pb-24 overflow-hidden">
-        <div className="flex animate-scroll-right will-change-transform">
-          <div className="flex gap-5 md:gap-6 shrink-0 pr-5 md:pr-6">
-            {benefits.map((b, i) => (
-              <BenefitCard key={`a-${i}`} b={b} />
-            ))}
-          </div>
-          <div className="flex gap-5 md:gap-6 shrink-0">
-            {benefits.map((b, i) => (
-              <BenefitCard key={`b-${i}`} b={b} />
-            ))}
-          </div>
+      {/* Interactive infinite carousel of benefits */}
+      <BenefitsMarquee benefits={benefits} />
+    </section>
+  );
+}
+
+function BenefitsMarquee({ benefits }: { benefits: Array<{ i: any; t: string; img: string }> }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const speedRef = useRef(60); // px/s, positive = move left (content scrolls right-to-left)
+  const offsetRef = useRef(0);
+  const halfWidthRef = useRef(0);
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    const measure = () => { halfWidthRef.current = track.scrollWidth / 2; };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(track);
+
+    let last = performance.now();
+    let raf = 0;
+    const tick = (now: number) => {
+      const dt = (now - last) / 1000;
+      last = now;
+      offsetRef.current += speedRef.current * dt;
+      const hw = halfWidthRef.current || 1;
+      if (offsetRef.current >= hw) offsetRef.current -= hw;
+      if (offsetRef.current < 0) offsetRef.current += hw;
+      track.style.transform = `translateX(${-offsetRef.current}px)`;
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => { cancelAnimationFrame(raf); ro.disconnect(); };
+  }, []);
+
+  const onMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = containerRef.current!.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width; // 0..1
+    // Map: left edge -> -240 (reverse fast), center (~0.5) -> small dead zone, right edge -> +240
+    const centered = (x - 0.5) * 2; // -1..1
+    const dead = 0.08;
+    const adj = Math.abs(centered) < dead ? 0 : centered - Math.sign(centered) * dead;
+    speedRef.current = 60 + adj * 320;
+  };
+
+  const onLeave = () => { speedRef.current = 60; };
+
+  return (
+    <div
+      ref={containerRef}
+      onMouseMove={onMove}
+      onMouseLeave={onLeave}
+      className="relative pb-16 md:pb-24 overflow-hidden cursor-ew-resize select-none"
+    >
+      <div ref={trackRef} className="flex will-change-transform">
+        <div className="flex gap-5 md:gap-6 shrink-0 pr-5 md:pr-6">
+          {benefits.map((b, i) => (
+            <BenefitCard key={`a-${i}`} b={b} />
+          ))}
+        </div>
+        <div className="flex gap-5 md:gap-6 shrink-0 pr-5 md:pr-6">
+          {benefits.map((b, i) => (
+            <BenefitCard key={`b-${i}`} b={b} />
+          ))}
         </div>
       </div>
-    </section>
+      <p className="mt-4 text-center text-xs text-muted-foreground/70">Mueve el mouse a la derecha o izquierda para acelerar · al centro para frenar</p>
+    </div>
   );
 }
 
