@@ -26,6 +26,15 @@ import protectionBeach from "@/assets/protection-beach.jpg";
 import protectionRain from "@/assets/protection-rain.jpg";
 import protectionWind from "@/assets/protection-wind.jpg";
 import protectionKids from "@/assets/protection-kids.jpg";
+import expCasa from "@/assets/tech/casa.jpg";
+import expApartamento from "@/assets/tech/apartamento.jpg";
+import expOficina from "@/assets/tech/oficina.jpg";
+import expLocal from "@/assets/tech/local.jpg";
+import expEdificio from "@/assets/tech/edificio.jpg";
+import expHotel from "@/assets/tech/hotel.jpg";
+import expConsultorio from "@/assets/tech/consultorio.jpg";
+import expFachada from "@/assets/tech/fachada.jpg";
+import expProyecto from "@/assets/tech/proyecto.jpg";
 
 const WHATSAPP_URL = "https://wa.link/yjf1m1";
 const WA_DEFAULT = WHATSAPP_URL;
@@ -649,12 +658,18 @@ function Warranty() {
 /* ---------------- 9. Experience ---------------- */
 function Experience() {
   const cats = [
-    { i: Home, t: "Casas" }, { i: Building2, t: "Apartamentos" }, { i: Briefcase, t: "Oficinas" },
-    { i: Store, t: "Locales comerciales" }, { i: Building2, t: "Edificios" }, { i: Hotel, t: "Hoteles" },
-    { i: Stethoscope, t: "Consultorios" }, { i: Layers, t: "Fachadas en vidrio" }, { i: Sparkles, t: "Proyectos especiales" },
+    { i: Home, t: "Casas", img: expCasa },
+    { i: Building2, t: "Apartamentos", img: expApartamento },
+    { i: Briefcase, t: "Oficinas", img: expOficina },
+    { i: Store, t: "Locales comerciales", img: expLocal },
+    { i: Building2, t: "Edificios", img: expEdificio },
+    { i: Hotel, t: "Hoteles", img: expHotel },
+    { i: Stethoscope, t: "Consultorios", img: expConsultorio },
+    { i: Layers, t: "Fachadas en vidrio", img: expFachada },
+    { i: Sparkles, t: "Proyectos especiales", img: expProyecto },
   ];
   return (
-    <section className="bg-background text-foreground">
+    <section className="bg-background text-foreground overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 py-20 md:py-28">
         <Reveal>
           <div className="text-center">
@@ -667,19 +682,8 @@ function Experience() {
             </p>
           </div>
         </Reveal>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
-          {cats.map((c, i) => (
-            <Reveal key={c.t} delay={i * 70}>
-              <div className="group flex items-center gap-4 glass-card rounded-2xl p-5 transition-all hover:-translate-y-1 hover:border-[var(--gold)]">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[oklch(1_0_0/0.06)] text-[var(--gold)] group-hover:bg-[var(--gradient-gold)] group-hover:text-[var(--ink)] transition-colors">
-                  <c.i className="h-6 w-6" />
-                </div>
-                <span className="font-bold">{c.t}</span>
-              </div>
-            </Reveal>
-          ))}
-        </div>
       </div>
+      <BenefitsMarquee benefits={cats} />
     </section>
   );
 }
