@@ -5,7 +5,7 @@ import {
   Briefcase, Store, Stethoscope, Layers, CheckCircle2, ChevronDown,
   MessageCircle, Award, Ruler, FileText,
   CalendarCheck, ShieldCheck, Zap, Palette, MonitorSmartphone, PaintBucket,
-  Droplets, CloudRain, Wind, Users,
+  Droplets, CloudRain, Wind, Users, Quote,
 } from "lucide-react";
 import logo from "@/assets/arquitectonico/logo.png";
 import heroImg from "@/assets/arquitectonico/hero.jpg";
@@ -536,6 +536,11 @@ function InstallSection() {
 }
 
 /* ---------------- 7. Testimonials ---------------- */
+const textTestimonialsArq = [
+  { name: "Laura G.", role: "Oficina en Bogotá", text: "Desde que instalamos la película en la oficina, la temperatura bajó notablemente y el equipo de aire acondicionado trabaja mucho menos." },
+  { name: "Miguel R.", role: "Apartamento en Medellín", text: "La privacidad es total. Desde afuera no se ve nada, pero desde adentro conservamos la vista y la luz natural perfectamente." },
+];
+
 function Testimonials() {
   return (
     <section className="bg-background text-foreground">
@@ -546,8 +551,22 @@ function Testimonials() {
             <h2 className="mt-3 text-3xl md:text-5xl font-extrabold">Esto es lo que dicen nuestros clientes</h2>
           </div>
         </Reveal>
-        <div className="mt-12 flex justify-center">
-          <Reveal>
+
+        <div className="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-center">
+          {/* Left text testimonial */}
+          <Reveal className="order-2 lg:order-1">
+            <article className="glass-card h-full flex flex-col p-6 rounded-2xl border border-[oklch(1_0_0/0.08)]">
+              <Quote className="h-7 w-7 text-[var(--gold)] mb-3" />
+              <p className="text-base text-foreground/85 leading-relaxed flex-1">{textTestimonialsArq[0].text}</p>
+              <div className="mt-5 pt-4 border-t border-[oklch(1_0_0/0.08)]">
+                <div className="text-foreground font-bold">{textTestimonialsArq[0].name}</div>
+                <div className="text-xs text-[var(--gold-soft)]">{textTestimonialsArq[0].role}</div>
+              </div>
+            </article>
+          </Reveal>
+
+          {/* Center video testimonial */}
+          <Reveal className="order-1 lg:order-2 flex justify-center">
             <div className="relative w-full max-w-[380px]">
               <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-[var(--gold)]/40 via-transparent to-white/10 blur-2xl opacity-70" />
               <div className="relative overflow-hidden glass-card rounded-2xl border border-[var(--gold)]/30 bg-black">
@@ -562,6 +581,18 @@ function Testimonials() {
                 </div>
               </div>
             </div>
+          </Reveal>
+
+          {/* Right text testimonial */}
+          <Reveal className="order-3">
+            <article className="glass-card h-full flex flex-col p-6 rounded-2xl border border-[oklch(1_0_0/0.08)]">
+              <Quote className="h-7 w-7 text-[var(--gold)] mb-3" />
+              <p className="text-base text-foreground/85 leading-relaxed flex-1">{textTestimonialsArq[1].text}</p>
+              <div className="mt-5 pt-4 border-t border-[oklch(1_0_0/0.08)]">
+                <div className="text-foreground font-bold">{textTestimonialsArq[1].name}</div>
+                <div className="text-xs text-[var(--gold-soft)]">{textTestimonialsArq[1].role}</div>
+              </div>
+            </article>
           </Reveal>
         </div>
       </div>
