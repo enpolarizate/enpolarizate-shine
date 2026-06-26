@@ -26,6 +26,15 @@ import protectionBeach from "@/assets/protection-beach.jpg";
 import protectionRain from "@/assets/protection-rain.jpg";
 import protectionWind from "@/assets/protection-wind.jpg";
 import protectionKids from "@/assets/protection-kids.jpg";
+import expCasa from "@/assets/tech/casa.jpg";
+import expApartamento from "@/assets/tech/apartamento.jpg";
+import expOficina from "@/assets/tech/oficina.jpg";
+import expLocal from "@/assets/tech/local.jpg";
+import expEdificio from "@/assets/tech/edificio.jpg";
+import expHotel from "@/assets/tech/hotel.jpg";
+import expConsultorio from "@/assets/tech/consultorio.jpg";
+import expFachada from "@/assets/tech/fachada.jpg";
+import expProyecto from "@/assets/tech/proyecto.jpg";
 
 const WHATSAPP_URL = "https://wa.link/yjf1m1";
 const WA_DEFAULT = WHATSAPP_URL;
