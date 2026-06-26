@@ -1,18 +1,6 @@
-# Eliminar botón "Asesoría WhatsApp" del Header
+Update the video testimonial embed in the Testimonials section.
 
-## Contexto
-- Archivo: `src/pages/PeliculasArquitectonicas.tsx`
-- El botón está en la línea 142 dentro del componente `Header`.
-- Es el único lugar donde se renderiza `CtaButton` con el texto "Asesoría WhatsApp".
+- **File:** `src/components/site/Testimonials.tsx`
+- **Change:** Replace the current YouTube embed URL `https://www.youtube.com/embed/qWDARZ8qjRk?rel=0` with the new testimonial video `https://www.youtube.com/embed/ACAfc8BCjQM?rel=0`.
 
-## Cambios a realizar
-1. **Eliminar** la línea del `CtaButton` dentro del `<header>` en `PeliculasArquitectonicas.tsx`:
-   ```tsx
-   <CtaButton className="hidden sm:inline-flex !px-5 !py-2.5 !text-xs">Asesoría WhatsApp</CtaButton>
-   ```
-   Al eliminar este botón, el header quedará con el logo a la izquierda y el espacio a la derecha vacío, manteniendo el layout `justify-between`.
-
-2. **Opcional**: si el `CtaButton` o sus estilos (`btn-gold`, etc.) dejan de usarse exclusivamente en este header (se usan en otras secciones), no se toca nada más.
-
-## Riesgos
-- Ninguno. Es un cambio de UI aislado que no afecta funcionalidad ni otras rutas del sitio.
+No other UI or layout changes needed.
