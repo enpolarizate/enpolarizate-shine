@@ -46,7 +46,7 @@ function Reveal({ children, delay = 0, className = "" }: { children: ReactNode; 
 /* ---------------- Buttons ---------------- */
 function CtaButton({ href = WA_DEFAULT, children, variant = "gold", className = "" }: { href?: string; children: ReactNode; variant?: "gold" | "outline"; className?: string }) {
   const base =
-    "inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-4 text-sm md:text-base font-bold tracking-wide uppercase transition-all duration-300 will-change-transform";
+    "inline-flex items-center justify-center gap-2.5 rounded-full px-10 py-4 text-sm md:text-base font-bold tracking-wide uppercase transition-all duration-300 will-change-transform";
   const styles =
     variant === "gold"
       ? "btn-gold btn-gold-hover hover:-translate-y-0.5"
