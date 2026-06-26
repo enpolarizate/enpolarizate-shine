@@ -694,9 +694,9 @@ function Experience() {
 /* ---------------- 10. Coverage ---------------- */
 function Coverage() {
   const steps = [
-    { i: Ruler, t: "El cliente envía las medidas del espacio" },
-    { i: FileText, t: "Realizamos la cotización personalizada" },
-    { i: CalendarCheck, t: "Se agenda la instalación profesional" },
+    { i: Ruler, t: "Toma de medidas", d: "El cliente envía las medidas del espacio para un presupuesto preciso y sin sorpresas.", img: covMeasures },
+    { i: FileText, t: "Cotización personalizada", d: "Realizamos la cotización detallada según tus necesidades y el tipo de película ideal.", img: covQuote },
+    { i: CalendarCheck, t: "Instalación profesional", d: "Se agenda la instalación con técnicos certificados y garantía incluida.", img: covInstall },
   ];
   return (
     <section className="bg-[var(--ink)]">
@@ -709,17 +709,21 @@ function Coverage() {
             <p className="mt-2 text-xl font-bold">¿Cómo funciona?</p>
           </div>
         </Reveal>
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 md:grid-cols-3 items-stretch">
           {steps.map((s, i) => (
-            <Reveal key={s.t} delay={i * 150}>
-              <div className="relative glass-card rounded-2xl p-7 transition-all hover:-translate-y-1 hover:border-[oklch(0.82_0.14_85/0.4)]">
-                <div className="absolute -top-5 left-7 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--gradient-gold)] text-[var(--ink)] font-extrabold shadow-[var(--shadow-gold)]">
-                  {i + 1}
+            <Reveal key={s.t} delay={i * 150} className="h-full">
+              <div className="group relative overflow-hidden rounded-2xl border border-[oklch(1_0_0/0.06)] bg-[oklch(0.14_0.01_50)] transition-all hover:-translate-y-1 hover:border-[oklch(0.82_0.14_85/0.3)] h-full flex flex-col">
+                <div className="relative h-52 overflow-hidden flex-shrink-0">
+                  <img src={s.img} alt={s.t} width={1024} height={768} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[oklch(0.14_0.01_50/0.8)]" />
+                  <div className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--gradient-gold)] text-[var(--ink)] shadow-[var(--shadow-gold)]">
+                    <s.i className="h-5 w-5" />
+                  </div>
                 </div>
-                <div className="mt-3 flex h-12 w-12 items-center justify-center rounded-xl bg-[oklch(1_0_0/0.06)] text-[var(--gold)]">
-                  <s.i className="h-6 w-6" />
+                <div className="p-6 flex-grow flex flex-col">
+                  <h3 className="text-lg font-bold text-white">{s.t}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.d}</p>
                 </div>
-                <p className="mt-5 text-base md:text-lg font-semibold leading-snug">{s.t}</p>
               </div>
             </Reveal>
           ))}
