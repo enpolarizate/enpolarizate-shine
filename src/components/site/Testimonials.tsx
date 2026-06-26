@@ -37,7 +37,7 @@ export default function Testimonials() {
               <div className="relative rounded-2xl overflow-hidden border border-gold/30 bg-black shadow-[var(--shadow-gold-lg)]">
                 <div className="aspect-[9/16] w-full">
                   <iframe
-                    src="https://www.youtube.com/embed/ACAfc8BCjQM?rel=0"
+                    src="https://www.youtube.com/embed/qWDARZ8qjRk?rel=0"
                     title="Testimonio cliente ENPOLARÍZATE"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
