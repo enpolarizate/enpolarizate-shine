@@ -780,6 +780,11 @@ function Footer() {
                   <a href={h} className="text-muted-foreground transition-colors hover:text-[var(--gold)]">{t}</a>
                 </li>
               ))}
+              <li>
+                <Link to="/politica-privacidad" className="text-muted-foreground transition-colors hover:text-[var(--gold)]">
+                  política de privacidad — enpolarízate
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
