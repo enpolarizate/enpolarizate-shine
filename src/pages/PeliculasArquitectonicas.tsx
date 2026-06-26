@@ -606,7 +606,7 @@ function Warranty() {
   return (
     <section className="relative overflow-hidden bg-[var(--ink)]">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,oklch(0.82_0.14_85/0.12),transparent_55%)]" />
-      <div className="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
+      <div className="relative mx-auto max-w-6xl px-4 pt-10 md:pt-14 pb-20 md:pb-28">
         <Reveal>
           <div className="text-center">
             <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-[var(--gradient-gold)] text-[var(--ink)] shadow-[var(--shadow-gold)]">
