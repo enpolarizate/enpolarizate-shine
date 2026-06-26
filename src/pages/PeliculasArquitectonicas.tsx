@@ -5,6 +5,7 @@ import {
   Briefcase, Store, Stethoscope, Layers, CheckCircle2, ChevronDown,
   MessageCircle, Award, Ruler, FileText,
   CalendarCheck, ShieldCheck, Zap, Palette, MonitorSmartphone, PaintBucket,
+  Droplets, CloudRain, Wind, Users,
 } from "lucide-react";
 import logo from "@/assets/arquitectonico/logo.png";
 import heroImg from "@/assets/arquitectonico/hero.jpg";
@@ -20,6 +21,11 @@ import techHeat from "@/assets/tech/heat.jpg";
 import techFurniture from "@/assets/tech/furniture.jpg";
 import techGlare from "@/assets/tech/glare.jpg";
 import techVandalism from "@/assets/tech/vandalism.jpg";
+import protectionSun from "@/assets/protection-sun.jpg";
+import protectionBeach from "@/assets/protection-beach.jpg";
+import protectionRain from "@/assets/protection-rain.jpg";
+import protectionWind from "@/assets/protection-wind.jpg";
+import protectionKids from "@/assets/protection-kids.jpg";
 
 const WHATSAPP_URL = "https://wa.link/yjf1m1";
 const WA_DEFAULT = WHATSAPP_URL;
