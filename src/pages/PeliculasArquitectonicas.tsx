@@ -404,34 +404,84 @@ function BenefitCard({ b }: { b: { i: any; t: string; img: string } }) {
 /* ---------------- 5. Protection ---------------- */
 function Protection() {
   const items = [
-    { icon: "☀️", t: "Sol intenso durante el día" },
-    { icon: "🌊", t: "Ambientes cercanos a playa o alta humedad" },
-    { icon: "🌧️", t: "Lluvias constantes" },
-    { icon: "💨", t: "Viento y cambios climáticos" },
-    { icon: "👦", t: "Niños y alto tráfico en interiores" },
+    {
+      icon: Sun,
+      title: "Sol intenso durante el día",
+      desc: "Reduce el calor y el deslumbramiento en espacios con alta exposición solar.",
+      img: protectionSun,
+    },
+    {
+      icon: Droplets,
+      title: "Ambientes cercanos a playa o alta humedad",
+      desc: "Película diseñada para resistir corrosión y humedad extrema sin degradarse.",
+      img: protectionBeach,
+    },
+    {
+      icon: CloudRain,
+      title: "Lluvias constantes",
+      desc: "Mayor adhesión y durabilidad frente a climas húmedos y lluvia persistente.",
+      img: protectionRain,
+    },
+    {
+      icon: Wind,
+      title: "Viento y cambios climáticos",
+      desc: "Mantiene su rendimiento térmico y estructural ante variaciones extremas.",
+      img: protectionWind,
+    },
+    {
+      icon: Users,
+      title: "Niños y alto tráfico en interiores",
+      desc: "Protección adicional contra impactos accidentales en zonas de alto movimiento.",
+      img: protectionKids,
+    },
   ];
   return (
-    <section className="bg-background text-foreground">
+    <section className="bg-background text-foreground overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 py-20 md:py-28">
         <Reveal>
-          <div className="text-center">
+          <div className="text-center max-w-3xl mx-auto">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--gold)]">Protección integral</p>
-            <h2 className="mt-3 text-3xl md:text-5xl font-extrabold">Protección real para tu espacio</h2>
-            <p className="mt-4 text-base md:text-lg text-muted-foreground">Diseñada para espacios expuestos a:</p>
+            <h2 className="mt-3 text-3xl md:text-5xl font-extrabold">
+              Protección <span className="text-gradient-gold">real</span> para tu espacio
+            </h2>
+            <p className="mt-4 text-base md:text-lg text-muted-foreground">
+              Diseñada para espacios expuestos a condiciones extremas.
+            </p>
           </div>
         </Reveal>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {items.map((it, i) => (
-            <Reveal key={it.t} delay={i * 100}>
-              <div className="group h-full glass-card rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[var(--gold)]">
-                <div className="text-4xl">{it.icon}</div>
-                <p className="mt-4 text-sm font-semibold">{it.t}</p>
-              </div>
-            </Reveal>
-          ))}
+
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          {items.map((it, i) => {
+            const Icon = it.icon;
+            return (
+              <Reveal key={it.title} delay={i * 100} className="h-full">
+                <article className="group glass-card rounded-2xl overflow-hidden h-full flex flex-col transition-all duration-500 hover:-translate-y-1 hover:border-[var(--gold)]">
+                  <div className="relative aspect-[16/11] overflow-hidden">
+                    <img
+                      src={it.img}
+                      alt={it.title}
+                      loading="lazy"
+                      width={1024}
+                      height={704}
+                      className="h-full w-full object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                    <div className="absolute top-3 left-3 flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--gradient-gold)] text-[var(--ink)] shadow-[var(--shadow-gold)] transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                  </div>
+                  <div className="p-5 flex-1 flex flex-col">
+                    <h3 className="font-bold text-sm md:text-base leading-snug">{it.title}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{it.desc}</p>
+                  </div>
+                </article>
+              </Reveal>
+            );
+          })}
         </div>
+
         <Reveal delay={200}>
-          <div className="mt-12 flex flex-col items-center">
+          <div className="mt-14 flex flex-col items-center">
             <CtaButton>Recibir asesoría por WhatsApp</CtaButton>
             <SupportLine />
           </div>
