@@ -1,5 +1,6 @@
 import { Instagram, Facebook, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { WHATSAPP_URL } from "./FloatingWhatsApp";
 
 const links = [
   { href: "#inicio", label: "Inicio" },
