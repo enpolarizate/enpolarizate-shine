@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { Link } from "react-router-dom";
 import {
   Sun, Shield, Eye, Snowflake, Sparkles, Building2, Home, Hotel,
   Briefcase, Store, Stethoscope, Layers, CheckCircle2, ChevronDown,
@@ -741,15 +742,43 @@ function FinalCta() {
           <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Descubre cuál es la película ideal para tu espacio y recibe asesoría profesional según tu necesidad.
           </p>
-          <div className="mt-10 flex flex-col items-center">
-            <CtaButton className="!px-9 !py-5 !text-base">Recibir asesoría por WhatsApp</CtaButton>
-            <SupportLine />
-          </div>
+          <PrivacyGatedCta />
         </Reveal>
       </div>
     </section>
   );
 }
+
+function PrivacyGatedCta() {
+  const [accepted, setAccepted] = useState(false);
+  return (
+    <div className="mt-10 flex flex-col items-center">
+      <label className="mb-5 flex max-w-xl cursor-pointer items-start gap-3 text-left text-sm text-muted-foreground">
+        <input
+          type="checkbox"
+          checked={accepted}
+          onChange={(e) => setAccepted(e.target.checked)}
+          className="mt-1 h-4 w-4 shrink-0 cursor-pointer accent-[var(--gold)]"
+        />
+        <span>
+          Acepto la{" "}
+          <Link to="/politica-privacidad" className="text-[var(--gold)] underline underline-offset-2 hover:opacity-80">
+            Política de Privacidad
+          </Link>{" "}
+          y el tratamiento de mis datos personales para recibir asesoría por WhatsApp.
+        </span>
+      </label>
+      <CtaButton
+        className={`!px-9 !py-5 !text-base ${accepted ? "" : "pointer-events-none opacity-50"}`}
+      >
+        Recibir asesoría por WhatsApp
+      </CtaButton>
+      <SupportLine />
+    </div>
+  );
+}
+
+
 
 /* ---------------- 15. Footer ---------------- */
 function Footer() {
@@ -789,6 +818,9 @@ function Footer() {
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-[oklch(1_0_0/0.06)] pt-6 text-xs text-muted-foreground md:flex-row">
           <p>© {new Date().getFullYear()} ENPOLARÍZATE. Todos los derechos reservados.</p>
+          <Link to="/politica-privacidad" className="transition-colors hover:text-[var(--gold)]">
+            Política de Privacidad
+          </Link>
           <p>Protege tu camino y Enpolarízate.</p>
         </div>
       </div>

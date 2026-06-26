@@ -1,58 +1,25 @@
-# Portar landing de Películas Arquitectónicas
+## Objetivo
+Reforzar la aceptación de políticas de privacidad en la ruta `/peliculas-arquitectonicas`.
 
-Voy a traer la landing page completa del proyecto **"Enpolarizate Window Shields"** (la que vende películas de seguridad para hogares, oficinas y comercios) como una nueva página dentro de este proyecto, accesible en una ruta propia.
+## Cambios (todos en `src/pages/PeliculasArquitectonicas.tsx`)
 
-## Ruta y navegación
-- Nueva URL: **`/peliculas-arquitectonicas`**
-- Sin enlace agregado en navbar/footer del sitio actual (la página queda accesible solo por URL directa, hasta que indiques lo contrario).
-- Registro de la ruta en `src/App.tsx`.
+### 1. Banner de cookies global
+Ya está montado globalmente en `App.tsx` (`<CookieConsent />`), por lo que aparece automáticamente en esta ruta. Verificaré en preview que se muestre correctamente sobre el fondo oscuro de la página; si hace falta, no cambia nada más.
 
-## Assets a copiar
-Desde el otro proyecto → a `src/assets/arquitectonico/`:
-- `hero.jpg`
-- `building.jpg`
-- `tints.jpg`
-- `install.jpg`
-- `logo.png` (reutilizaré el logo existente del proyecto si es el mismo; si difiere lo copio aparte)
+### 2. Enlace a Política de Privacidad en el footer
+En el bloque inferior del footer (línea ~790, junto al copyright):
+- Agregar un enlace `Política de Privacidad` que apunte a `/peliculas-arquitectonicas` no — apunta a la ruta existente `/politica-privacidad` usando `<Link>` de `react-router-dom`.
+- Estilo discreto coherente con el footer (`text-muted-foreground hover:text-[var(--gold)]`).
 
-## Estructura de la página
-Misma arquitectura que el original (13 secciones):
-1. Sticky WhatsApp flotante
-2. Barra de alerta superior
-3. Header con logo + CTA
-4. Hero con VSL embebido (YouTube) + stats
-5. Tonalidades y niveles de privacidad (35/50/70%)
-6. Tecnología Nanocerámica Americana + grid de 9 beneficios
-7. Protección real (5 escenarios con emojis)
-8. Instalación interior/exterior
-9. Testimonios en video (3 columnas)
-10. Garantía profesional (4 a 8 años)
-11. 16 años de experiencia (9 categorías)
-12. Cobertura nacional (3 pasos)
-13. Al por mayor (B2B)
-14. Qué incluye tu servicio
-15. FAQ acordeón
-16. CTA final + Footer
-
-Todos los textos se mantienen idénticos al original.
+### 3. Checkbox de aceptación en el CTA final
+En el componente `FinalCta` (línea 727):
+- Agregar un checkbox controlado ("Acepto la Política de Privacidad y el tratamiento de mis datos") justo arriba del botón "Recibir asesoría por WhatsApp".
+- El texto incluye un link a `/politica-privacidad`.
+- El botón CTA queda deshabilitado (opacidad + `pointer-events-none`) hasta marcar la casilla; al marcarla, el `<a>` queda activo y abre WhatsApp.
+- Se mantiene el mismo estilo visual del botón dorado actual.
 
 ## Detalles técnicos
-
-El otro proyecto está en **TanStack Start + Tailwind v4**, este está en **React Router + Vite + Tailwind v3**. Adaptaciones necesarias:
-
-- Convertir `createFileRoute` → componente de página estándar en `src/pages/PeliculasArquitectonicas.tsx`.
-- Reemplazar utilidades `@utility` de Tailwind v4 (`text-gradient-gold`, `glass-card`, `btn-gold`, `btn-gold-hover`, `bg-hero`) por clases CSS planas dentro de `src/index.css` bajo `@layer components`.
-- Agregar a `src/index.css` las variables de marca que falten (`--gold-soft`, `--gold-deep`, `--ink`, `--charcoal`, `--silver`, `--whatsapp`, `--gradient-gold`, `--gradient-hero`, `--shadow-gold`, `--shadow-card`) sin tocar los tokens existentes del sitio principal — se agregan como complemento.
-- Reutilizar la constante `WHATSAPP_URL = "https://wa.link/yjf1m1"` ya configurada en este proyecto en lugar de `wa.me/573001234567`. Para el botón "Cotizar al por mayor" usaré el mismo link salvo que prefieras otro.
-- Meta tags (title, description, og:image) se configuran con `react-helmet`/equivalente solo si ya existe en el proyecto; si no, los pongo como `<title>` dinámico en `useEffect`.
-- Animaciones `Reveal` con IntersectionObserver y keyframes (`fade-up`, `fade-in`, `glow`) agregadas al CSS.
-
-## Archivos a crear/modificar
-- **Nuevo:** `src/pages/PeliculasArquitectonicas.tsx` (~800 líneas, todo el contenido en un solo archivo siguiendo el patrón del original)
-- **Nuevo:** carpeta `src/assets/arquitectonico/` con 4–5 imágenes
-- **Modificar:** `src/index.css` — agregar variables y utilidades faltantes
-- **Modificar:** `src/App.tsx` — registrar la ruta nueva
-
-## Lo que NO se toca
-- La landing actual de polarizado automotriz (`/`) queda intacta.
-- Navbar, footer, política de privacidad, banner de cookies del sitio principal: sin cambios.
+- Reusar `useState<boolean>` local en `FinalCta`.
+- Importar `Link` desde `react-router-dom` (ya disponible en el proyecto).
+- No se toca `CookieConsent.tsx` ni `App.tsx`.
+- No se introducen colores nuevos; se reutilizan tokens `var(--gold)`, `text-muted-foreground`, y clases existentes (`glass-card` opcional para enmarcar el checkbox).
