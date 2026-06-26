@@ -101,7 +101,7 @@ export default function Hero() {
           <div className="relative rounded-2xl overflow-hidden border border-gold/30 bg-black shadow-[var(--shadow-gold-lg)]">
             <div className="aspect-video w-full">
               <iframe
-                src="https://www.youtube.com/embed/pWVwVaYAVlM?rel=0"
+                src="https://www.youtube.com/embed/cyPBKoHdJyU?rel=0"
                 title="VSL ENPOLARÍZATE"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
