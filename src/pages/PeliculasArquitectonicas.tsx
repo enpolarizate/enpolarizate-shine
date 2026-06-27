@@ -632,11 +632,11 @@ function Warranty() {
         <Reveal delay={150}>
           <div className="mt-12 glass-card rounded-2xl p-6 md:p-10">
             <p className="text-center text-lg font-semibold">Nuestra garantía cubre:</p>
-            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5 items-stretch">
               {covers.map((c, i) => (
-                <Reveal key={c} delay={i * 80}>
-                  <div className="flex items-center gap-3 rounded-xl border border-[oklch(1_0_0/0.08)] bg-[oklch(1_0_0/0.03)] p-4">
-                    <CheckCircle2 className="h-5 w-5 text-[var(--gold)]" />
+                <Reveal key={c} delay={i * 80} className="h-full">
+                  <div className="flex h-full items-center gap-3 rounded-xl border border-[oklch(1_0_0/0.08)] bg-[oklch(1_0_0/0.03)] p-4">
+                    <CheckCircle2 className="h-5 w-5 text-[var(--gold)] shrink-0" />
                     <span className="text-sm font-medium">{c}</span>
                   </div>
                 </Reveal>
