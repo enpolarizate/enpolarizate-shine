@@ -10,7 +10,7 @@ import {
 import logo from "@/assets/arquitectonico/logo.png";
 import heroImg from "@/assets/arquitectonico/hero.jpg";
 import tintsImg from "@/assets/arquitectonico/tints.jpg";
-import installImg from "@/assets/arquitectonico/install.jpg";
+import installImg from "@/assets/arquitectonico/install.jpg.asset.json";
 import buildingImg from "@/assets/arquitectonico/building.jpg";
 import techViews from "@/assets/tech/views.jpg";
 import techEnergy from "@/assets/tech/energy.jpg";
@@ -512,7 +512,7 @@ function InstallSection() {
           <Reveal>
             <div className="relative">
               <div className="absolute -inset-4 rounded-3xl bg-[var(--gradient-gold)] opacity-15 blur-2xl" />
-              <img src={installImg} alt="Instalación profesional de película arquitectónica" width={1920} height={1280} loading="lazy" className="relative aspect-[4/3] w-full rounded-2xl object-cover shadow-[var(--shadow-card)]" />
+              <img src={installImg.url} alt="Instalación profesional de película arquitectónica" width={1920} height={1280} loading="lazy" className="relative aspect-[4/3] w-full rounded-2xl object-cover shadow-[var(--shadow-card)]" />
             </div>
           </Reveal>
           <Reveal delay={150}>
