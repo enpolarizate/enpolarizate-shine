@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import tintMasOscuro from "@/assets/tint-mas-oscuro.jpg.asset.json";
 import tintEquilibrio from "@/assets/tint-equilibrio.jpg.asset.json";
+import tintMasClaro from "@/assets/tint-mas-claro.jpg.asset.json";
 import logo from "@/assets/arquitectonico/logo.png";
 import heroImg from "@/assets/arquitectonico/hero.jpg";
 import installImg from "@/assets/arquitectonico/install.jpg.asset.json";
@@ -247,11 +248,11 @@ function Tints() {
                       ? { backgroundImage: `url(${tintMasOscuro.url})` }
                       : i === 1
                       ? { backgroundImage: `url(${tintEquilibrio.url})` }
-                      : { background: o.shade }
+                      : { backgroundImage: `url(${tintMasClaro.url})` }
                   }
                 >
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(1_0_0/0.18),transparent_60%)]" />
-                  {(i === 0 || i === 1) && <div className="absolute inset-0 bg-black/40" />}
+                  <div className="absolute inset-0 bg-black/40" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="text-6xl font-extrabold tracking-tight text-white drop-shadow-lg">{o.p}</span>
                   </div>
