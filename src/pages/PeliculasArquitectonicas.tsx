@@ -8,6 +8,7 @@ import {
   Droplets, CloudRain, Wind, Users, Quote,
 } from "lucide-react";
 import tintMasOscuro from "@/assets/tint-mas-oscuro.jpg.asset.json";
+import tintEquilibrio from "@/assets/tint-equilibrio.jpg.asset.json";
 import logo from "@/assets/arquitectonico/logo.png";
 import heroImg from "@/assets/arquitectonico/hero.jpg";
 import installImg from "@/assets/arquitectonico/install.jpg.asset.json";
