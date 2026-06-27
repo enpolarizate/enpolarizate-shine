@@ -9,7 +9,6 @@ import {
 } from "lucide-react";
 import logo from "@/assets/arquitectonico/logo.png";
 import heroImg from "@/assets/arquitectonico/hero.jpg";
-import tintsImg from "@/assets/arquitectonico/tints.jpg";
 import installImg from "@/assets/arquitectonico/install.jpg.asset.json";
 import buildingImg from "@/assets/arquitectonico/building.jpg";
 import techViews from "@/assets/tech/views.jpg";
@@ -254,11 +253,6 @@ function Tints() {
           ))}
         </div>
 
-        <Reveal delay={200}>
-          <div className="mt-14 overflow-hidden rounded-2xl border border-[oklch(0_0_0/0.06)]">
-            <img src={tintsImg} alt="Comparación visual de niveles de tonalidad 35%, 50% y 70%" width={1920} height={1080} loading="lazy" className="w-full object-cover" />
-          </div>
-        </Reveal>
 
         <Reveal delay={100}>
           <div className="mt-12 max-w-3xl mx-auto text-center space-y-2 text-muted-foreground">
