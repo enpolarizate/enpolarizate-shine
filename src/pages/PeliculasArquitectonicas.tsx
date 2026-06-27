@@ -242,10 +242,16 @@ function Tints() {
                 )}
                 <div
                   className="relative h-44 overflow-hidden flex-shrink-0 bg-cover bg-center"
-                  style={i === 0 ? { backgroundImage: `url(${tintMasOscuro.url})` } : { background: o.shade }}
+                  style={
+                    i === 0
+                      ? { backgroundImage: `url(${tintMasOscuro.url})` }
+                      : i === 1
+                      ? { backgroundImage: `url(${tintEquilibrio.url})` }
+                      : { background: o.shade }
+                  }
                 >
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(1_0_0/0.18),transparent_60%)]" />
-                  {i === 0 && <div className="absolute inset-0 bg-black/40" />}
+                  {(i === 0 || i === 1) && <div className="absolute inset-0 bg-black/40" />}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="text-6xl font-extrabold tracking-tight text-white drop-shadow-lg">{o.p}</span>
                   </div>
