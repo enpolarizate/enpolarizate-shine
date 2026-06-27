@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>ENPOLARÍZATE</title>
+    <script>
+      // SPA fallback para GitHub Pages: preserva la ruta y la pasa a index.html
+      (function () {
+        var l = window.location;
+        var path = l.pathname + l.search;
+        sessionStorage.setItem("spa-redirect", path);
+        l.replace(l.protocol + "//" + l.host + "/");
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
