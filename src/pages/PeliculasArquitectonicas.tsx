@@ -7,6 +7,7 @@ import {
   CalendarCheck, ShieldCheck, Zap, Palette, MonitorSmartphone, PaintBucket,
   Droplets, CloudRain, Wind, Users, Quote,
 } from "lucide-react";
+import tintMasOscuro from "@/assets/tint-mas-oscuro.jpg.asset.json";
 import logo from "@/assets/arquitectonico/logo.png";
 import heroImg from "@/assets/arquitectonico/hero.jpg";
 import installImg from "@/assets/arquitectonico/install.jpg.asset.json";
@@ -238,8 +239,12 @@ function Tints() {
                 {o.badge && (
                   <span className="absolute right-4 top-4 z-10 rounded-full bg-[var(--gradient-gold)] px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-[var(--ink)]">{o.badge}</span>
                 )}
-                <div className="relative h-44 overflow-hidden flex-shrink-0" style={{ background: o.shade }}>
+                <div
+                  className="relative h-44 overflow-hidden flex-shrink-0 bg-cover bg-center"
+                  style={i === 0 ? { backgroundImage: `url(${tintMasOscuro.url})` } : { background: o.shade }}
+                >
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(1_0_0/0.18),transparent_60%)]" />
+                  {i === 0 && <div className="absolute inset-0 bg-black/40" />}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="text-6xl font-extrabold tracking-tight text-white drop-shadow-lg">{o.p}</span>
                   </div>
