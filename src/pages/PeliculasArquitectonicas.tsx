@@ -808,7 +808,7 @@ function Offer() {
             <Reveal key={it.t} delay={i * 100}>
               <div className="group relative overflow-hidden glass-card rounded-2xl p-6 md:p-7 transition-all hover:-translate-y-1">
                 <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[var(--gradient-gold)] opacity-10 blur-2xl group-hover:opacity-25 transition-opacity" />
-                <div className="relative flex items-start gap-5">
+                <div className="relative flex items-center gap-5">
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[oklch(1_0_0/0.06)] text-[var(--gold)]">
                     <it.i className="h-7 w-7" />
                   </div>
