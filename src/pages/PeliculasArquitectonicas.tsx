@@ -254,11 +254,6 @@ function Tints() {
           ))}
         </div>
 
-        <Reveal delay={200}>
-          <div className="mt-14 overflow-hidden rounded-2xl border border-[oklch(0_0_0/0.06)]">
-            <img src={tintsImg} alt="Comparación visual de niveles de tonalidad 35%, 50% y 70%" width={1920} height={1080} loading="lazy" className="w-full object-cover" />
-          </div>
-        </Reveal>
 
         <Reveal delay={100}>
           <div className="mt-12 max-w-3xl mx-auto text-center space-y-2 text-muted-foreground">
