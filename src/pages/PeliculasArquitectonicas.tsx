@@ -108,10 +108,10 @@ export default function PeliculasArquitectonicas() {
       <AlertBar />
       <Hero />
       <Tints />
+      <Testimonials />
       <Tech />
       <Protection />
       <InstallSection />
-      <Testimonials />
       <Warranty />
       <Experience />
       <Coverage />
