@@ -9,7 +9,6 @@ import {
 } from "lucide-react";
 import logo from "@/assets/arquitectonico/logo.png";
 import heroImg from "@/assets/arquitectonico/hero.jpg";
-import tintsImg from "@/assets/arquitectonico/tints.jpg";
 import installImg from "@/assets/arquitectonico/install.jpg.asset.json";
 import buildingImg from "@/assets/arquitectonico/building.jpg";
 import techViews from "@/assets/tech/views.jpg";
