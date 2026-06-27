@@ -8,8 +8,8 @@ const links = [
   { href: "#tecnologia", label: "Tecnología" },
   { href: "#testimonios", label: "Testimonios" },
   { href: "#faq", label: "FAQ" },
-  { href: "/#/peliculas-arquitectonicas", label: "Películas arquitectónicas" },
-  { href: "/#/politica-privacidad", label: "Política de privacidad" },
+  { href: "/peliculas-arquitectonicas", label: "Películas arquitectónicas" },
+  { href: "/politica-privacidad", label: "Política de privacidad" },
 ];
 
 export default function Footer() {
