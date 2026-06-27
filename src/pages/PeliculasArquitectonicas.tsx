@@ -223,7 +223,7 @@ function Tints() {
   ];
   return (
     <section className="relative bg-background text-foreground">
-      <div className="mx-auto max-w-7xl px-4 py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-4 pt-20 md:pt-28 pb-10 md:pb-14">
         <Reveal>
           <div className="text-center">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--gold)]">Privacidad e iluminación</p>
