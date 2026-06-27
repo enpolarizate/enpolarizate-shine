@@ -151,7 +151,7 @@ export default function PoliticaPrivacidad() {
     <main className="bg-background text-foreground overflow-x-hidden min-h-screen">
       <div className="border-b border-border/60 bg-black/40">
         <div className="container-pro py-6 px-6 flex items-center justify-between">
-          <a href="/" className="text-sm font-semibold text-gold-light hover:text-gold transition-colors">
+          <a href="/#/" className="text-sm font-semibold text-gold-light hover:text-gold transition-colors">
             ← Volver al inicio
           </a>
         </div>

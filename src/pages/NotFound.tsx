@@ -10,12 +10,20 @@ const NotFound = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-muted">
-      <div className="text-center">
+      <div className="text-center px-6">
         <h1 className="mb-4 text-4xl font-bold">404</h1>
-        <p className="mb-4 text-xl text-muted-foreground">Oops! Page not found</p>
-        <a href="/" className="text-primary underline hover:text-primary/90">
-          Return to Home
-        </a>
+        <p className="mb-6 text-xl text-muted-foreground">Página no encontrada</p>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-primary">
+          <a href="/#/" className="underline hover:text-primary/90">
+            Volver al inicio
+          </a>
+          <a href="/#/politica-privacidad" className="underline hover:text-primary/90">
+            Política de privacidad
+          </a>
+          <a href="/#/peliculas-arquitectonicas" className="underline hover:text-primary/90">
+            Películas arquitectónicas
+          </a>
+        </div>
       </div>
     </div>
   );
