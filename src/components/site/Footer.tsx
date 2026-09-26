@@ -58,6 +58,13 @@ export default function Footer() {
 
         <div className="mt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
           <span>© {new Date().getFullYear()} ENPOLARÍZATE. Todos los derechos reservados.</span>
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new Event("open-cookie-settings"))}
+            className="underline-offset-4 hover:text-gold-light hover:underline transition-colors"
+          >
+            Preferencias de cookies
+          </button>
           <span className="italic text-gold-light/80">Protege tu camino y Enpolarízate</span>
         </div>
       </div>
