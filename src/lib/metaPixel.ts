@@ -13,7 +13,7 @@ export type ConsentValue = "accepted" | "rejected" | null;
 
 declare global {
   interface Window {
-    fbq?: ((...args: unknown[]) => void) & { queue?: unknown[]; loaded?: boolean; version?: string; push?: unknown };
+    fbq?: ((...args: unknown[]) => void) & { queue?: unknown[]; callMethod?: (...args: unknown[]) => void; loaded?: boolean; version?: string; push?: unknown };
     _fbq?: unknown;
   }
 }

@@ -26,7 +26,7 @@ const sections = [
       },
       {
         subtitle: "5. COOKIES Y TECNOLOGÍAS DE SEGUIMIENTO",
-        text: "Nuestro sitio web puede utilizar cookies y herramientas de análisis para:\n• Mejorar la navegación\n• Medir campañas publicitarias\n• Optimizar experiencia de usuario\n• Analizar comportamiento de navegación\n\nEl usuario puede desactivar cookies desde su navegador."
+        text: "Nuestro sitio web puede utilizar cookies y herramientas de análisis para:\n• Mejorar la navegación\n• Medir campañas publicitarias\n• Optimizar experiencia de usuario\n• Analizar comportamiento de navegación\n\nPÍXEL DE META: Solo si el visitante acepta en el banner de cookies, usamos el Píxel de Meta (Meta Platforms, Inc. — Facebook/Instagram). Este recibe datos técnicos de navegación (páginas visitadas, dirección IP, navegador, identificadores de cookies) y el evento de clic en los botones de WhatsApp, con el fin de medir y optimizar nuestras campañas publicitarias. Guardamos en tu navegador tu elección (aceptar o rechazar) y la fecha. Si rechazas, el píxel no se carga ni envía información.\n\nPuedes cambiar o retirar tu consentimiento en cualquier momento desde el enlace \"Preferencias de cookies\" al pie de página, o desactivar cookies desde tu navegador."
       },
       {
         subtitle: "6. DERECHOS DEL TITULAR",
